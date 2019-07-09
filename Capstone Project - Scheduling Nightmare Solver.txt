@@ -1,7 +1,7 @@
 Scheduling Nightmare Solver
 Controllers
 * HomeController
-* AdminController
+* AdminController -types in two names of groups (e.g. Bachurim and Families)
 * Client1Controller
 * Client2Controller
 * SolutionController (all the methods with logic)
@@ -15,23 +15,29 @@ Models
 * Form
 Views
 * Home
-- Index.cshtml (button: “Get Started!”)
+- Index.cshtml (button: â€œGet Started!â€)
 - About
 * Admin
 - Index (navBar)
 * Client1
-- Index (list of all Clients of type #1, has button “Create a new Client1” , will get rerouted to Add Form)
-- Details (when click on one Client1, automatically get sent here, has buttons “Name”, “Edit”, “Delete”, “Freeze”)
-- Edit (when click on the edit button next to one Client1, “ ”)
-- Delete (when click on the delete button next to one Client1, “ “)
+- Index (list of all Clients of type #1, has button â€œCreate a new Client1â€ , will get rerouted to Add Form)
+- Details (when click on one Client1, automatically get sent here, has buttons â€œNameâ€, â€œEditâ€, â€œDeleteâ€, â€œFreezeâ€)
+- Edit (when click on the edit button next to one Client1, â€œ â€)
+- Delete (when click on the delete button next to one Client1, â€œ â€œ)
 * Client2 
 - Same Views as for Client1
 * Solution
-- Index (shows the layout of a calendar, with the names of each client filled in at the hours requested – only shows matches, also shows clients that don’t match, so he can manually put them in) 
+- Index (shows the layout of a calendar, with the names of each client filled in at the hours requested â€“ only shows matches, also shows clients that donâ€™t match, so he can manually put them in) 
 - Details (when click on one day/hour/time slot, automatically get sent here)
 - (when click on a client, get rerouted to the Details page of that client)
 * Form
-- Index (here the Admin can customize the types of forms to send out)
+{comment} - Index (here the Admin can customize the types of forms to send out) {/comment}
 - Add (can fill out a form to create a new client)
-??''?
 
+CLIENT FORM
+Radio Button / Drop Down List - choose which client group (based on what the admin inputted)
+First Name
+Last Name
+Address
+Email
+Time
