@@ -17,6 +17,7 @@ namespace CapstoneProject.Models
 
     public class SendCodeViewModel
     {
+        //comment
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
         public string ReturnUrl { get; set; }
