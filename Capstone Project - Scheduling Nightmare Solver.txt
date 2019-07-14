@@ -1,0 +1,42 @@
+Scheduling Nightmare Solver
+Controllers
+* HomeController
+* AdminController -types in two names of groups (e.g. Bachurim and Families)
+* ClientController
+* SolutionController (all the methods with logic)
+* FormController
+Models
+* Home.cs
+* Admin
+* Client1
+* Client2
+* Solution
+* Form
+Views
+* Home
+- Index.cshtml (button: “Get Started!”)
+- About
+* Admin
+- Index (navBar)
+* Client
+- Index (list of all Clients of type #1 and #2, has button “Create a new Client” , will get rerouted to Add Form)
+- Details (when click on one Client, automatically get sent here, has buttons “Name”, “Edit”, “Delete”, “Freeze”)
+- Edit (when click on the edit button next to one Client, “ ”)
+- Delete (when click on the delete button next to one Client, “ “)
+* Solution
+- Index (shows the layout of a calendar, with the names of each client filled in at the hours requested – only shows matches, also shows clients that don’t match, so he can manually put them in) 
+- Details (when click on one day/hour/time slot, automatically get sent here)
+- (when click on a client, get rerouted to the Details page of that client)
+* Form
+{comment} - Index (here the Admin can customize the types of forms to send out) {/comment}
+- Add (can fill out a form to create a new client)
+
+CLIENT FORM
+Radio Button / Drop Down List - choose which client group (based on what the admin inputted)
+First Name
+Last Name
+Address
+Email
+Time
+
+Test Line Here
