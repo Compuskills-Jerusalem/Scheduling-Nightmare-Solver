@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CapstoneProject.Models
 {
+    //test
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
