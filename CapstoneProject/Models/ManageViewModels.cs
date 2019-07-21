@@ -5,6 +5,7 @@ using Microsoft.Owin.Security;
 
 namespace CapstoneProject.Models
 {
+    //test2
     public class IndexViewModel
     {
         public bool HasPassword { get; set; }
