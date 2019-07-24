@@ -12,7 +12,7 @@ namespace CapstoneProject.Controllers
 
 
     public class HomeController : Controller
-    {//Hey this is Mindys coment - Vivi lagh!!!! ha ha I have a spelling mistake :P :P :P
+    {
         public ActionResult Index()
         {
             return View();
