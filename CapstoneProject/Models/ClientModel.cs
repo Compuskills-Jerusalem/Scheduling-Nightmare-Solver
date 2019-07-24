@@ -7,6 +7,7 @@ namespace CapstoneProject.Models
 {
     public class ClientModel
     {
+        //Hi Mindy!!!!
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
