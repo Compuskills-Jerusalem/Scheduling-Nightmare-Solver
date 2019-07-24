@@ -6,8 +6,7 @@ using System.Web.Mvc;
 
 namespace CapstoneProject.Controllers
 {
-    //Hey this is Yummis coment - Vivi lagh!!!! ha ha I have a spelling mistake :P :P :P
-    //This is a second comment by Yummi checking GitHuv descktop
+    
     public class HomeController : Controller
     {
         public ActionResult Index()
