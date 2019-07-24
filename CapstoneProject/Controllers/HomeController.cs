@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace CapstoneProject.Controllers
 {
-    //Hey this is Yummis coment - Vivi lagh!!!! ha ha I have a spelling mistake :P :P :P
+    
     //Hey this is Mindys coment - Vivi lagh!!!! ha ha I have a spelling mistake :P :P :P
+
     public class HomeController : Controller
     {
         public ActionResult Index()
