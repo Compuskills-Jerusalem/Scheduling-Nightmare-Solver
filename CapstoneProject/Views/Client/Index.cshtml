@@ -12,7 +12,29 @@
 </p>
 <table class="table">
     <tr>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Email)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Client.AvailableFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.AvailableUntil)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Client.ClientGroup)
+        </th>
+        <th>
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -37,7 +59,7 @@
             @Html.DisplayFor(modelItem => item.Client.AvailableUntil)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Client.ClientGroup)
+            @Html.DisplayFor(modelItem => item.Client.ClientGroup.Name)
 
         </td>
 

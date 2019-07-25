@@ -47,7 +47,11 @@ namespace CapstoneProject.Controllers
         // GET: Client/Create
         public ActionResult Create()
         {
-            var groupName = _context.GroupNames.ToList();
+            var groupName = _context.GroupNames.Select(g => new SelectListItem
+            {
+                Value = g.Name,
+                Text = g.Name
+            });
             var viewModel = new CreateClientNameViewModel
             {
                 GroupName = groupName
