@@ -20,6 +20,9 @@ namespace CapstoneProject.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<GroupName> GroupNames { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
