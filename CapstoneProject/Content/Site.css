@@ -54,3 +54,6 @@ a {
 .navbar-inverse {
 border-color: none !important;
 }
+.btn {
+    background-color: #5c4965 !important;
+}
