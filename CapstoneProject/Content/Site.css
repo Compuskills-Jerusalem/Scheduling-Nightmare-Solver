@@ -52,5 +52,5 @@ a {
         color: #eccccc !important;
     }
 .navbar-inverse {
-border-color: none;
+border-color: none !important;
 }
