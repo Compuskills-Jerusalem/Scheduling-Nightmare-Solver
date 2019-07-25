@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CapstoneProject.Models
 {
-    public class GroupName
+    public class GroupName 
     {
         [Key]
         public int GroupNamesId { get; set; }
