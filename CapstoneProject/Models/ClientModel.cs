@@ -110,7 +110,8 @@ namespace CapstoneProject.Models
         public string Address { get; set; }
         public string Email { get; set; }
 
-
+        public DateTime AvailableFrom { get; set; }
+        public DateTime AvailableUntil { get; set; }
 
         [Required]
         [Display(Name = "Client Group")]
