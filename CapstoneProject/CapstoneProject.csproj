@@ -49,6 +49,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -188,6 +191,10 @@
     <Compile Include="Migrations\201907281324050_ChangedNameGroupNameIdToId.Designer.cs">
       <DependentUpon>201907281324050_ChangedNameGroupNameIdToId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907281505336_deletedModelAttributes.cs" />
+    <Compile Include="Migrations\201907281505336_deletedModelAttributes.Designer.cs">
+      <DependentUpon>201907281505336_deletedModelAttributes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClientModel.cs" />
@@ -289,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907281324050_ChangedNameGroupNameIdToId.resx">
       <DependentUpon>201907281324050_ChangedNameGroupNameIdToId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907281505336_deletedModelAttributes.resx">
+      <DependentUpon>201907281505336_deletedModelAttributes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
