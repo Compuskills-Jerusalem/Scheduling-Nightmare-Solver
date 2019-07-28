@@ -24,7 +24,6 @@ textarea {
 }
 body {
     text-decoration-color: darkslategrey !important;
-    font-family: 'Butcherman', cursive !important;
     font-family: 'Fira Sans', sans-serif !important;
 }
 
@@ -34,13 +33,11 @@ body {
 }
 
 .navbar-brand {
-    font-family: 'Butcherman', cursive;
     text-align: center !important;
     font-size: 24px !important;
 }
 
 h2 {
-    font-family: 'Butcherman', cursive !important;
     font-family: 'Fira Sans', sans-serif !important;
 }
 
