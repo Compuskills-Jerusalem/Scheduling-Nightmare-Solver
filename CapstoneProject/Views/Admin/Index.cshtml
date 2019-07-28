@@ -1,16 +1,54 @@
-﻿
+﻿@model IEnumerable<CapstoneProject.Models.GroupName>
+
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Get Started</h2>
+<h2>Let's Get Started!</h2>
+
+<h3> List of Client Groups</h3>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupNamesId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+     {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupNamesId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+     }
+
+</table>
+
+
 
 @*<p>@Html.ActionLink("Clients", "", "", new { href = "javascript:void(0)" })</p>*@
 
-<div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-        <li>@Html.ActionLink("Clients", "", "")</li>
-        <li>@Html.ActionLink("Solution", "", "")</li>
-        <li>@Html.ActionLink("Careers", "", "")</li>
-    </ul>
-</div>
+@*<div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Clients", "", "")</li>
+            <li>@Html.ActionLink("Solution", "", "")</li>
+            <li>@Html.ActionLink("Careers", "", "")</li>
+        </ul>
+    </div>*@
