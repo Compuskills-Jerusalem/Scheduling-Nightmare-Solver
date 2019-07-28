@@ -183,6 +183,10 @@
     <Compile Include="Migrations\201907251447089_ChangedGroupNameToIEnumerable.Designer.cs">
       <DependentUpon>201907251447089_ChangedGroupNameToIEnumerable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907281324050_ChangedNameGroupNameIdToId.cs" />
+    <Compile Include="Migrations\201907281324050_ChangedNameGroupNameIdToId.Designer.cs">
+      <DependentUpon>201907281324050_ChangedNameGroupNameIdToId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClientModel.cs" />
@@ -280,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907251447089_ChangedGroupNameToIEnumerable.resx">
       <DependentUpon>201907251447089_ChangedGroupNameToIEnumerable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907281324050_ChangedNameGroupNameIdToId.resx">
+      <DependentUpon>201907281324050_ChangedNameGroupNameIdToId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

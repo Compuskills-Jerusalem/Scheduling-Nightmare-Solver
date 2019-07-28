@@ -34,7 +34,7 @@ namespace CapstoneProject.Controllers
         // GET: Admin2/Details/5
         public ActionResult Details(int id)
         {
-            var groupNames = _context.GroupNames.SingleOrDefault(c => c.GroupNamesId == id);
+            var groupNames = _context.GroupNames.SingleOrDefault(c => c.Id == id);
             if (groupNames == null)
                 return HttpNotFound();
 
