@@ -55,6 +55,7 @@ namespace CapstoneProject.Controllers
             var viewModel = new CreateClientNameViewModel
             {
                 GroupName = groupName
+                
             };
             return View("Create", viewModel);
         }
