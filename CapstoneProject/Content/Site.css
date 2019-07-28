@@ -58,3 +58,6 @@ border-color: none !important;
 .navbar {
     border-radius: 0px !important;
 }
+.navbar-inverse {
+    border-color: #5c4965 !important;
+}
