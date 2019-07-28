@@ -55,3 +55,6 @@ border-color: none !important;
     background-color: #5c4965 !important;
     border-color: #5c4965 !important;
 }
+.navbar-fixed-top{
+    border-width: 0px !important;
+}
