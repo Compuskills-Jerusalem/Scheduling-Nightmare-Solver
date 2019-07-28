@@ -1,0 +1,55 @@
+List<clients> AllMatches = new List<clients>();
+
+//Perfect match
+foreach (Fam fam in _context.Familys)
+{
+	foreach (Buch buch in _context.Buchurim)
+	{
+		foreach (datetime famDate in _context.fam.dates)
+		{
+			foreach (datetime buchDate in _context.buch.dates)
+			{
+				if (famDate.GetDate() == buchDate.GetDate()
+				{
+					if (buch.startTime == fam.startTime) &&
+					   (buch.EndTime == fam.EndTime) &&
+					   (All the hours between buch.StratTime To buch.EndTime are still True) &&
+					   (All the hours between fam.StratTime To fam.EndTime are still True) 
+					{
+						(All the hours between buch.StratTime To buch.EndTime = Hidden);
+						(All the hours between fam.StratTime To fam.EndTime = Hidden);
+						AllMatches.Add(this.Buch.Name, this.Fam.Name);
+					}
+				}
+			}
+		}
+	}
+}
+
+//Less Perfect Matches
+foreach (Fam fam in _context.Familys)
+{
+	foreach (Buch buch in _context.Buchurim)
+	{
+		foreach (datetime famDate in _context.fam.dates)
+		{
+			foreach (datetime buchDate in _context.buch.dates)
+			{
+				if (famDate.GetDate() == buchDate.GetDate()
+				{
+					int hoursMatched = 0;
+					foreach (int hour in buch.TFHours)
+					{
+						foreach (int hour in fam.TFHours)
+						{
+							if (buch.this.Hour == true) && (fam.this.Hour == true)
+							hoursMatched++;
+							save();
+						{
+					}
+					
+				}
+			}
+		}
+	}
+}
