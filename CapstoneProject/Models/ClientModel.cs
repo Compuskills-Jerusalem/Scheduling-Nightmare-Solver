@@ -37,8 +37,6 @@ namespace CapstoneProject.Models
 
         [Required]
         [Display(Name = "Client Group")]
-       
-        
         public int GroupNameId { get; set; }
         [ForeignKey("GroupNameId")]
         public IEnumerable<GroupName> ClientGroup { get; set; }

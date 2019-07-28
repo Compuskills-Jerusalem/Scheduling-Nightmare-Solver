@@ -14,7 +14,7 @@ namespace CapstoneProject.Migrations
         public override void Down()
         {
             CreateIndex("dbo.Clients", "GroupNameId");
-            AddForeignKey("dbo.Clients", "GroupNameId", "dbo.GroupNames", "GroupNamesId", cascadeDelete: true);
+            AddForeignKey("dbo.Clients", "GroupNameId", "dbo.GroupNames", "Id", cascadeDelete: true);
         }
     }
 }
