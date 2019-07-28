@@ -3,35 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+using CapstoneProject.Models;
+using CapstoneProject.ViewModels;
+using System.ComponentModel.DataAnnotations;
 
 namespace CapstoneProject.Controllers
 {
     public class AdminController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public AdminController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Admin2
         public ActionResult Index()
         {
-            return View();
+            var groupNames = _context.GroupNames.ToList();
+            return View(groupNames);
         }
 
         // GET: Admin2/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var groupNames = _context.GroupNames.SingleOrDefault(c => c.GroupNamesId == id);
+            if (groupNames == null)
+                return HttpNotFound();
+
+            return View(groupNames);
         }
 
         // GET: Admin2/Create
         public ActionResult Create()
         {
-            return View();
+            return View("Create");
         }
 
         // POST: Admin2/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(GroupName groupName)
         {
+            if (!ModelState.IsValid)
+                return View();
             try
             {
+                _context.GroupNames.Add(groupName);
+                _context.SaveChanges();
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
