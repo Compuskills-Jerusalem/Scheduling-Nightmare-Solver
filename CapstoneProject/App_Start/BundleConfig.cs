@@ -25,6 +25,13 @@ namespace CapstoneProject
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/common").Include(
+                 "~/Scripts/jquery-3.3.1.min.js",
+                 "~/Scripts/moment.min.js",
+                 "~/Scripts/bootstrap.min.js",
+                 "~/Scripts/bootstrap-datetimepicker.min.js",
+                 "~/Scripts/CustomScript.js"));
         }
     }
 }
