@@ -8,12 +8,12 @@ namespace CapstoneProject.Migrations
         public override void Up()
         {
             AddColumn("dbo.Clients", "AvailableUntil", c => c.DateTime(nullable: false));
-            DropColumn("dbo.Clients", "AvailableTill");
+            //DropColumn("dbo.Clients", "AvailableTill");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Clients", "AvailableTill", c => c.DateTime(nullable: false));
+            //AddColumn("dbo.Clients", "AvailableTill", c => c.DateTime(nullable: false));
             DropColumn("dbo.Clients", "AvailableUntil");
         }
     }
