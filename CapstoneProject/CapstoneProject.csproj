@@ -203,7 +203,6 @@
     <Compile Include="Migrations\201907281925556_DateTime.Designer.cs">
       <DependentUpon>201907281925556_DateTime.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Migrations\201907301448232_puttingAvailableFromBack.cs" />
     <Compile Include="Migrations\201907301448232_puttingAvailableFromBack.Designer.cs">
       <DependentUpon>201907301448232_puttingAvailableFromBack.cs</DependentUpon>
