@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -52,7 +53,7 @@ namespace CapstoneProject.Controllers
                 return urlBeginning;
             }
 
-            string url = BuildUrl("339", "Alexandra Road", "Gateshead", "NE8 4HX", "England");
+            string url = BuildUrl("27", "Hamagid Mimezeritch", "Beitar", "90500", "Israel");
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
@@ -71,6 +72,14 @@ namespace CapstoneProject.Controllers
 
             JObject json = JObject.Parse(dataText);
             JObject latitude = JObject.Parse(json["Response"]["View"][0]["Result"][0]["Location"]["NavigationPosition"][0].ToString());
+            //JSON.Parse(json);
+
+
+
+            //check kosbie github capstone mens to see how to store logic externally
+
+
+
 
             string stringLat = latitude.ToString();
             return Content(stringLat);
