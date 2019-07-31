@@ -218,7 +218,10 @@
     <Compile Include="Migrations\201907301452363_SplitAddressField.cs" />
     <Compile Include="Migrations\201907301452363_SplitAddressField.Designer.cs">
       <DependentUpon>201907301452363_SplitAddressField.cs</DependentUpon>
-
+    </Compile>
+    <Compile Include="Migrations\201907311247197_updatemydb.cs" />
+    <Compile Include="Migrations\201907311247197_updatemydb.Designer.cs">
+      <DependentUpon>201907311247197_updatemydb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -338,7 +341,6 @@
     <EmbeddedResource Include="Migrations\201907281925556_DateTime.resx">
       <DependentUpon>201907281925556_DateTime.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Migrations\201907301448232_puttingAvailableFromBack.resx">
       <DependentUpon>201907301448232_puttingAvailableFromBack.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,7 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907301452363_SplitAddressField.resx">
       <DependentUpon>201907301452363_SplitAddressField.cs</DependentUpon>
-
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907311247197_updatemydb.resx">
+      <DependentUpon>201907311247197_updatemydb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
