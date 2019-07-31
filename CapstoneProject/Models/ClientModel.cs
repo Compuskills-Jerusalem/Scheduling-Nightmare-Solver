@@ -121,8 +121,10 @@ namespace CapstoneProject.Models
         [Display(Name = "Client Group")]
         public int GroupNameId { get; set; }
 
-        [ForeignKey("GroupNameId")]
+        [ForeignKey("GroupName")]
         public IEnumerable<GroupName> ClientGroup { get; set; }
+
+        public virtual GroupName GroupName { get; set; }
         
     }
 }
