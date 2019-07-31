@@ -104,7 +104,7 @@ namespace CapstoneProject.Models
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
         public string HouseNumber { get; set; }
