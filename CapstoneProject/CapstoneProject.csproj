@@ -235,6 +235,10 @@
     <Compile Include="Migrations\201907311409181_addednewmodel.Designer.cs">
       <DependentUpon>201907311409181_addednewmodel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907311435495_AddingTheFormerMigrations.cs" />
+    <Compile Include="Migrations\201907311435495_AddingTheFormerMigrations.Designer.cs">
+      <DependentUpon>201907311435495_AddingTheFormerMigrations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AvailableSlot.cs" />
@@ -378,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311409181_addednewmodel.resx">
       <DependentUpon>201907311409181_addednewmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907311435495_AddingTheFormerMigrations.resx">
+      <DependentUpon>201907311435495_AddingTheFormerMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
