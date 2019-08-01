@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using CapstoneProject.Controllers;
 using CapstoneProject.Models;
 using System.Data;
+using CapstoneProject.ViewModels;
 
 namespace CapstoneProject.Models
 {
