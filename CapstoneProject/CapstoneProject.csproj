@@ -111,6 +111,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="toJSON, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ToJSON.1.0.0.4\lib\net45\toJSON.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -242,6 +245,8 @@
     <Compile Include="Migrations\201907311457301_AddingMigrations.cs" />
     <Compile Include="Migrations\201907311457301_AddingMigrations.Designer.cs">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
+
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -374,6 +379,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907301452363_SplitAddressField.resx">
       <DependentUpon>201907301452363_SplitAddressField.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311247197_updatemydb.resx">
       <DependentUpon>201907311247197_updatemydb.cs</DependentUpon>
@@ -392,6 +398,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311457301_AddingMigrations.resx">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
+
+
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

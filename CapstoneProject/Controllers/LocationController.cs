@@ -8,23 +8,25 @@ using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace CapstoneProject.Controllers
 {
-
     public class LocationController : Controller
     {
-        public class RequestedData
+        public class AddressLocation
         {
             public string Latitude { get; set; }
             public string Longitude { get; set; }
         }
+
         // GET: Location
         public ActionResult Index()
         {
             string BuildUrl(string houseNumber, string streetName, string town, string postalCode, string country)
             {
                 string urlBeginning = $"https://geocoder.api.here.com/6.2/geocode.json?app_id=LhgMMXSgRrECNyW5g28t&app_code=G8x8pAjhZNjNR_QLWcyyQQ&searchtext=";
+                string attributeSwitches = "&locationattributes=none";
                 string queryParameters = "";
                 string space = "%20";
 
@@ -49,40 +51,34 @@ namespace CapstoneProject.Controllers
                 }
                 queryParameters = queryParameters.Remove(queryParameters.Length - 3, 3);
                 urlBeginning += queryParameters;
-
+                urlBeginning += attributeSwitches;
                 return urlBeginning;
             }
 
-            string url = BuildUrl("27", "Hamagid Mimezeritch", "Beitar", "90500", "Israel");
+            string url = BuildUrl("6", "Shamgar", "Jerusalem", "", "Israel");
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
-
-            RequestedData requestedData = new RequestedData();
+            AddressLocation address = new AddressLocation();
             dynamic dataText;
             using (var response = (HttpWebResponse)request.GetResponse())
             {
                 using (var reader = new StreamReader(response.GetResponseStream()))
                 {
-                    JavaScriptSerializer serializer = new JavaScriptSerializer();
+                    //JavaScriptSerializer serializer = new JavaScriptSerializer();
                     dataText = reader.ReadToEnd();
-                    requestedData = serializer.Deserialize<RequestedData>(dataText);
+                    //address = serializer.Deserialize<AddressLocation>(dataText);
                 }
             }
 
             JObject json = JObject.Parse(dataText);
-            JObject latitude = JObject.Parse(json["Response"]["View"][0]["Result"][0]["Location"]["NavigationPosition"][0].ToString());
-            //JSON.Parse(json);
-
-
-
-            //check kosbie github capstone mens to see how to store logic externally
-
-
-
-
-            string stringLat = latitude.ToString();
-            return Content(stringLat);
-        }
+            JToken latitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Latitude");
+            JToken longitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Longitude");
+            address.Latitude = latitudeJson.ToString();
+            address.Longitude = longitudeJson.ToString();
+            
+            return Content(address.Latitude);
+        }            
     }
 }
+    
