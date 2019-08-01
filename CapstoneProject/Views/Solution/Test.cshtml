@@ -1,4 +1,4 @@
-﻿@model CapstoneProject.Models.AdminTime
+﻿
 
 <!DOCTYPE html>
 <html>
@@ -13,10 +13,18 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
+
+    @model CapstoneProject.Models.AdminTime
+        @using CapstoneProject.ViewModels
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 </head>
 <body>
     
-    <p>Admin date is @Model.AdminDate</p>
+    <p>Admin date is @Model.AdminDate.ToString()</p>
     <div id="scheduler"></div>
     <script>
         $("#scheduler").kendoScheduler({
