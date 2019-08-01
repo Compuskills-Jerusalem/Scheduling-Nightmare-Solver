@@ -67,7 +67,24 @@ namespace CapstoneProject.Controllers
             }
         }
 
-        // GET: Admin2/Edit/5
+        public ActionResult CreateAdminTime()
+        {
+            return View();
+        }
+
+        // POST: Customer/Create
+        [HttpPost]
+        public ActionResult CreateAdminTime(AdminTime adminTime)
+        {
+            if (!ModelState.IsValid)
+                return View();
+            _context.AdminTimes.Add(adminTime);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        //GET: Admin2/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
