@@ -247,6 +247,14 @@
     <Compile Include="Migrations\201908011251335_AddAdminTime.Designer.cs">
       <DependentUpon>201908011251335_AddAdminTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908011354536_DeleatSolutionModole.cs" />
+    <Compile Include="Migrations\201908011354536_DeleatSolutionModole.Designer.cs">
+      <DependentUpon>201908011354536_DeleatSolutionModole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908011356568_DeleteSolutionModel.cs" />
+    <Compile Include="Migrations\201908011356568_DeleteSolutionModel.Designer.cs">
+      <DependentUpon>201908011356568_DeleteSolutionModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AvailableSlot.cs" />
@@ -254,7 +262,6 @@
     <Compile Include="Models\GroupName.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
@@ -400,6 +407,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908011251335_AddAdminTime.resx">
       <DependentUpon>201908011251335_AddAdminTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908011354536_DeleatSolutionModole.resx">
+      <DependentUpon>201908011354536_DeleatSolutionModole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908011356568_DeleteSolutionModel.resx">
+      <DependentUpon>201908011356568_DeleteSolutionModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
