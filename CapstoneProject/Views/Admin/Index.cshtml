@@ -7,7 +7,11 @@
 
 <h2>Let's Get Started!</h2>
 
-<h3> List of Client Groups</h3>
+<h4>
+    Step #1:<br />
+</h4>
+<p>Create the two groups you want to match by listing there names</p>
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -22,8 +26,15 @@
         </th>
     </tr>
 
+
     @foreach (var item in Model)
     {
+        if (!Model.Any()) //Why is this not working?
+        {
+            <p>They are no clients listed yet. Please create a new client</p>
+        }
+        else
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Id)
@@ -37,9 +48,50 @@
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
+        }
     }
- 
+
 </table>
+<h4>
+    Step #2<br />
+</h4>
+<p>Which month do you want to create your Solution for?</p>
+
+<div>
+    <label for="month">Month:</label>
+    <select id="month" name="month">
+        <option selected>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+    </select>
+
+    <label for="year">Year:</label>
+    <select id="year" name="year">
+        <option selected>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+        <option>2028</option>
+        <option>2029</option>
+        <option>2030</option>
+    </select>
+</div>
+<div style="padding-bottom: 30px;"></div>
+
 <div class="btn btn-default">
     @Html.ActionLink("Continue", "Create", "Client", new { }, null)
 </div>

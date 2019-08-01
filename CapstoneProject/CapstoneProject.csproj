@@ -243,6 +243,10 @@
     <Compile Include="Migrations\201907311457301_AddingMigrations.Designer.cs">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908011251335_AddAdminTime.cs" />
+    <Compile Include="Migrations\201908011251335_AddAdminTime.Designer.cs">
+      <DependentUpon>201908011251335_AddAdminTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AvailableSlot.cs" />
@@ -250,6 +254,7 @@
     <Compile Include="Models\GroupName.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
@@ -392,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311457301_AddingMigrations.resx">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908011251335_AddAdminTime.resx">
+      <DependentUpon>201908011251335_AddAdminTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
