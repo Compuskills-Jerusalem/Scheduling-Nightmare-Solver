@@ -24,13 +24,12 @@
 </head>
 <body>
     
-    <p>Admin date is @Model.AdminDate.ToString()</p>
     <div id="scheduler"></div>
     <script>
         $("#scheduler").kendoScheduler({
             date: Date.now(),
             selectable: true,
-            views: ["day", "week"],
+            views: ["day", "month"],
             dataSource: [
                 {
                     id: 1,
