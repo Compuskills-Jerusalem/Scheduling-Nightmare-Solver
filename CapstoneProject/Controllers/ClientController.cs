@@ -7,6 +7,7 @@ using System.Data.Entity;
 using CapstoneProject.Models;
 using CapstoneProject.ViewModels;
 using System.ComponentModel.DataAnnotations;
+using CapstoneProject.Logic;
 
 
 namespace CapstoneProject.Controllers
@@ -73,7 +74,15 @@ namespace CapstoneProject.Controllers
                 _context.SaveChanges();
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                /* also add in:
+                    AddressCoordinates coordinates = new AddressCoordinates();
+                    Location location = new Location();
+                    coordinates = location.Geocode(client.HouseNumber, client.StreetName, client.Town, client.PostalCode, client.Country);
+                    client.dLatitude = coordinates.Latitude;
+                    client.dLongitude = client.dLongitude;
+
+                    return RedirectToAction("Index");
+                */
             }
             catch
             {

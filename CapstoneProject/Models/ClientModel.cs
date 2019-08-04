@@ -108,15 +108,20 @@ namespace CapstoneProject.Models
         //[Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
+
         public string HouseNumber { get; set; }
         public string StreetName { get; set; }
         public string Town { get; set; }
         public string PostalCode { get; set; }
         public string Country { get; set; }
+
         public string Email { get; set; }
 
         public DateTime AvailableFrom { get; set; }
         public DateTime AvailableUntil { get; set; }
+
+        public double dLatitude { get; set; }
+        public double dLongitude { get; set; }
 
         [Required]
         [Display(Name = "Client Group")]
