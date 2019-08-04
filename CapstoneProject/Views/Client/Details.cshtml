@@ -27,12 +27,52 @@
         @Html.DisplayFor(model => model.Client.LastName)
     </dd>
 
+    @*<dt>
+            @Html.DisplayNameFor(model => model.Client.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.Address)
+        </dd>*@
+
     <dt>
-        @Html.DisplayNameFor(model => model.Client.Address)
+        @Html.DisplayNameFor(model => model.Client.HouseNumber)
     </dt>
 
     <dd>
-        @Html.DisplayFor(model => model.Client.Address)
+        @Html.DisplayFor(model => model.Client.HouseNumber)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Client.StreetName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Client.StreetName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Client.Town)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Client.Town)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Client.PostalCode)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Client.PostalCode)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Client.Country)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Client.Country)
     </dd>
 
     <dt>
@@ -60,11 +100,11 @@
     </dd>
 
     <dt>
-        @Html.DisplayNameFor(model => model.Client.ClientGroup.Name)
+        @Html.DisplayNameFor(model => model.Client.ClientGroup)
     </dt>
 
     <dd>
-        @Html.DisplayFor(model => model.Client.ClientGroup.Name)
+        @Html.DisplayFor(model => model.GroupName)
     </dd>
 
     </dl>

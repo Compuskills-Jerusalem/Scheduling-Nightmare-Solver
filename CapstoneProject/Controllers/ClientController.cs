@@ -47,16 +47,21 @@ namespace CapstoneProject.Controllers
         // GET: Client/Create
         public ActionResult Create()
         {
-            var groupName = _context.GroupNames.Select(g => new SelectListItem
-            {
-                Value = g.Name,
-                Text = g.Name
-            });
-            var viewModel = new CreateClientNameViewModel
-            {
-                GroupName = groupName
-                
-            };
+            //var groupName = _context.GroupNames.Select(g => new SelectListItem
+            //{
+            //    Value = g.Name,
+            //    Text = g.Name
+            //});
+            //var viewModel = new CreateClientNameViewModel
+            //{
+            //    GroupName = groupName
+
+            //};
+
+            var groupName = _context.GroupNames.ToList();
+
+            var viewModel = new CreateClientNameViewModel { GroupName = groupName };
+
             return View("Create", viewModel);
         }
 
@@ -66,19 +71,22 @@ namespace CapstoneProject.Controllers
         {
 
             if (!ModelState.IsValid)
-                return View();
-            try
-            {
+                //return View();
+                return Content("1st one.");
+            //try
+            //{
                 _context.Clients.Add(client);
                 _context.SaveChanges();
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+                //return RedirectToAction("Index");
+                return Content("try");
+            //}
+            //catch
+            //{
+            //    //return View();
+            //    return Content("catch");
+            //}
         }
 
         // GET: Client/Edit/5
