@@ -7,6 +7,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using static CapstoneProject.Controllers.LocationController;
+using CapstoneProject.Models;
 
 namespace CapstoneProject.Logic
 {
@@ -50,16 +51,16 @@ namespace CapstoneProject.Logic
             return urlBeginning;
         }
 
-        private void GetTravelTime(double originLat, double originLong, double destinationLat, double destinationLong)
+     /*   public void GetTravelTime(Client originClient, Client destinationClient)
         {
-            GeoCoordinate origin = new GeoCoordinate(originLat, originLong);
-            GeoCoordinate destination = new GeoCoordinate(destinationLat, destinationLong);
+            //GeoCoordinate origin = new GeoCoordinate(originClient.dLatitude, originClient.dLongitude);
+            //GeoCoordinate destination = new GeoCoordinate(destinationClient.dLatitude, destinationClient.dLongitude);
 
             double distance = origin.GetDistanceTo(destination);
             // travelSpeedConstant is a very approximate calculation
             const int travelSpeedConstant = 145;
             double travelTime = distance / travelSpeedConstant;
-        }
+        }*/
 
         public AddressCoordinates Geocode(string houseNumber, string streetName, string town, string postalCode, string country)
         {
