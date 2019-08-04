@@ -7,14 +7,14 @@ namespace CapstoneProject.Migrations
     {
         public override void Up()
         {
-            DropColumn("dbo.Clients", "dLatitude");
-            DropColumn("dbo.Clients", "dLongitude");
+            //DropColumn("dbo.Clients", "dLatitude");
+            //DropColumn("dbo.Clients", "dLongitude");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Clients", "dLongitude", c => c.Double(nullable: false));
-            AddColumn("dbo.Clients", "dLatitude", c => c.Double(nullable: false));
+            //AddColumn("dbo.Clients", "dLongitude", c => c.Double(nullable: false));
+            //AddColumn("dbo.Clients", "dLatitude", c => c.Double(nullable: false));
         }
     }
 }

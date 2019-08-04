@@ -4,7 +4,7 @@ using System.Web.Mvc;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using System.Device.Location;
+//using System.Device.Location;
 
 namespace CapstoneProject.Controllers
 {

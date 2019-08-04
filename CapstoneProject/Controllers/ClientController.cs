@@ -7,7 +7,7 @@ using System.Data.Entity;
 using CapstoneProject.Models;
 using CapstoneProject.ViewModels;
 using System.ComponentModel.DataAnnotations;
-using CapstoneProject.Logic;
+//using CapstoneProject.Logic;
 
 
 namespace CapstoneProject.Controllers
