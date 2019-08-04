@@ -69,7 +69,8 @@ namespace CapstoneProject.Controllers
 
         public ActionResult CreateAdminTime()
         {
-            return View();
+            var adminTimes = _context.AdminTimes.ToList();
+            return View(adminTimes);
         }
 
         // POST: Customer/Create
