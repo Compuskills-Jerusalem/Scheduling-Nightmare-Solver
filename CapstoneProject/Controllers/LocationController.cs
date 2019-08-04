@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Net;
 using System.IO;
-using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
+using System.Device.Location;
 
 namespace CapstoneProject.Controllers
 {
@@ -18,6 +14,17 @@ namespace CapstoneProject.Controllers
         {
             public string Latitude { get; set; }
             public string Longitude { get; set; }
+        }
+
+        public void GetTravelTime(double originLat, double originLong, double destinationLat, double destinationLong)
+        {
+            GeoCoordinate origin = new GeoCoordinate(originLat, originLong);
+            GeoCoordinate destination = new GeoCoordinate(destinationLat, destinationLong);
+
+            double distance = origin.GetDistanceTo(destination);
+            // travelSpeedConstant is a very approximate calculation
+            const int travelSpeedConstant = 145;
+            double travelTime = distance / travelSpeedConstant;
         }
 
         // GET: Location
