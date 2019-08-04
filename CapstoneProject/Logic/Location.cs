@@ -83,6 +83,7 @@ namespace CapstoneProject.Logic
             JToken longitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Longitude");
             address.Latitude = (double)latitudeJson;
             address.Longitude = (double)longitudeJson;
+            return address;
         }
 
     }
