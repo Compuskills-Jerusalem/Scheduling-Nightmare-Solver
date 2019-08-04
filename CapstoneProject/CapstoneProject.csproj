@@ -262,11 +262,11 @@
     <Compile Include="Migrations\201908011412316_AddDBSetForAdminTime.Designer.cs">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="Migrations\201908041322143_AddToListOnAdminTimeController.cs" />
     <Compile Include="Migrations\201908041322143_AddToListOnAdminTimeController.Designer.cs">
       <DependentUpon>201908041322143_AddToListOnAdminTimeController.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Migrations\201908041313310_AdminTime.cs" />
     <Compile Include="Migrations\201908041313310_AdminTime.Designer.cs">
       <DependentUpon>201908041313310_AdminTime.cs</DependentUpon>
@@ -274,7 +274,7 @@
     <Compile Include="Migrations\201908041314562_AddCoordinateColumns.cs" />
     <Compile Include="Migrations\201908041314562_AddCoordinateColumns.Designer.cs">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
->>>>>>> c8f9fef23e6dde384b40dfd1fc1bb0bfb4bc199a
+
     </Compile>
     <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.cs" />
     <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.Designer.cs">
@@ -525,16 +525,15 @@
     <EmbeddedResource Include="Migrations\201908011412316_AddDBSetForAdminTime.resx">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
+
     <EmbeddedResource Include="Migrations\201908041322143_AddToListOnAdminTimeController.resx">
       <DependentUpon>201908041322143_AddToListOnAdminTimeController.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041313310_AdminTime.resx">
       <DependentUpon>201908041313310_AdminTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041314562_AddCoordinateColumns.resx">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
->>>>>>> c8f9fef23e6dde384b40dfd1fc1bb0bfb4bc199a
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041435458_DeleteCoordinateColumns.resx">
       <DependentUpon>201908041435458_DeleteCoordinateColumns.cs</DependentUpon>
