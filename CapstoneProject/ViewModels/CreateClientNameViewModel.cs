@@ -10,6 +10,7 @@ namespace CapstoneProject.ViewModels
     public class CreateClientNameViewModel
     {
         public Client Client { get; set; }
-        public IEnumerable<SelectListItem> GroupName { get; set; }
+        //public IEnumerable<SelectListItem> GroupName { get; set; }
+        public List<GroupName> GroupName { get; set; }
     }
 }

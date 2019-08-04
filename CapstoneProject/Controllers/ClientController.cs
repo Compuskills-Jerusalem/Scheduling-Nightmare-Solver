@@ -7,6 +7,7 @@ using System.Data.Entity;
 using CapstoneProject.Models;
 using CapstoneProject.ViewModels;
 using System.ComponentModel.DataAnnotations;
+using CapstoneProject.Logic;
 
 
 namespace CapstoneProject.Controllers
@@ -47,16 +48,21 @@ namespace CapstoneProject.Controllers
         // GET: Client/Create
         public ActionResult Create()
         {
-            var groupName = _context.GroupNames.Select(g => new SelectListItem
-            {
-                Value = g.Name,
-                Text = g.Name
-            });
-            var viewModel = new CreateClientNameViewModel
-            {
-                GroupName = groupName
-                
-            };
+            //var groupName = _context.GroupNames.Select(g => new SelectListItem
+            //{
+            //    Value = g.Name,
+            //    Text = g.Name
+            //});
+            //var viewModel = new CreateClientNameViewModel
+            //{
+            //    GroupName = groupName
+
+            //};
+
+            var groupName = _context.GroupNames.ToList();
+
+            var viewModel = new CreateClientNameViewModel { GroupName = groupName };
+
             return View("Create", viewModel);
         }
 
@@ -67,13 +73,24 @@ namespace CapstoneProject.Controllers
 
             if (!ModelState.IsValid)
                 return View();
+
             try
             {
                 _context.Clients.Add(client);
                 _context.SaveChanges();
                 // TODO: Add insert logic here
 
+                /* also add in:
+                   AddressCoordinates coordinates = new AddressCoordinates();
+                   Location location = new Location();
+                   coordinates = location.Geocode(client.HouseNumber, client.StreetName, client.Town, client.PostalCode, client.Country);
+                   client.dLatitude = coordinates.Latitude;
+                   client.dLongitude = client.dLongitude;
+
+                  
+               */
                 return RedirectToAction("Index");
+
             }
             catch
             {
@@ -81,6 +98,7 @@ namespace CapstoneProject.Controllers
             }
         }
 
+               
         // GET: Client/Edit/5
         public ActionResult Edit(int id)
         {
