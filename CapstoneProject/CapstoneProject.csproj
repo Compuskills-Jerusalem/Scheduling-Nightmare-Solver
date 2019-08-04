@@ -245,8 +245,6 @@
     <Compile Include="Migrations\201907311457301_AddingMigrations.cs" />
     <Compile Include="Migrations\201907311457301_AddingMigrations.Designer.cs">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
-
-
     </Compile>
     <Compile Include="Migrations\201908011251335_AddAdminTime.cs" />
     <Compile Include="Migrations\201908011251335_AddAdminTime.Designer.cs">
@@ -263,6 +261,10 @@
     <Compile Include="Migrations\201908011412316_AddDBSetForAdminTime.cs" />
     <Compile Include="Migrations\201908011412316_AddDBSetForAdminTime.Designer.cs">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908041322143_AddToListOnAdminTimeController.cs" />
+    <Compile Include="Migrations\201908041322143_AddToListOnAdminTimeController.Designer.cs">
+      <DependentUpon>201908041322143_AddToListOnAdminTimeController.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -397,7 +399,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907301452363_SplitAddressField.resx">
       <DependentUpon>201907301452363_SplitAddressField.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311247197_updatemydb.resx">
       <DependentUpon>201907311247197_updatemydb.cs</DependentUpon>
@@ -416,8 +417,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311457301_AddingMigrations.resx">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
-
-
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908011251335_AddAdminTime.resx">
       <DependentUpon>201908011251335_AddAdminTime.cs</DependentUpon>
@@ -430,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908011412316_AddDBSetForAdminTime.resx">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908041322143_AddToListOnAdminTimeController.resx">
+      <DependentUpon>201908041322143_AddToListOnAdminTimeController.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
