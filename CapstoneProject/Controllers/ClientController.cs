@@ -7,6 +7,7 @@ using System.Data.Entity;
 using CapstoneProject.Models;
 using CapstoneProject.ViewModels;
 using System.ComponentModel.DataAnnotations;
+using CapstoneProject.Logic;
 
 
 namespace CapstoneProject.Controllers
@@ -71,24 +72,33 @@ namespace CapstoneProject.Controllers
         {
 
             if (!ModelState.IsValid)
-                //return View();
-                return Content("1st one.");
-            //try
-            //{
+                return View();
+
+            try
+            {
                 _context.Clients.Add(client);
                 _context.SaveChanges();
                 // TODO: Add insert logic here
 
-                //return RedirectToAction("Index");
-                return Content("try");
-            //}
-            //catch
-            //{
-            //    //return View();
-            //    return Content("catch");
-            //}
+                /* also add in:
+                   AddressCoordinates coordinates = new AddressCoordinates();
+                   Location location = new Location();
+                   coordinates = location.Geocode(client.HouseNumber, client.StreetName, client.Town, client.PostalCode, client.Country);
+                   client.dLatitude = coordinates.Latitude;
+                   client.dLongitude = client.dLongitude;
+
+                  
+               */
+                return RedirectToAction("Index");
+
+            }
+            catch
+            {
+                return View();
+            }
         }
 
+               
         // GET: Client/Edit/5
         public ActionResult Edit(int id)
         {
