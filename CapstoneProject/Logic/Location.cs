@@ -17,6 +17,8 @@ namespace CapstoneProject.Logic
         public double Longitude { get; set; }
     }
 
+    //put in try catch
+
     public class Location
     {
         private string BuildUrl(string houseNumber, string streetName, string town, string postalCode, string country)
@@ -51,16 +53,16 @@ namespace CapstoneProject.Logic
             return urlBeginning;
         }
 
-     /*   public void GetTravelTime(Client originClient, Client destinationClient)
+        public void GetTravelTime(Client originClient, Client destinationClient)
         {
-            //GeoCoordinate origin = new GeoCoordinate(originClient.dLatitude, originClient.dLongitude);
-            //GeoCoordinate destination = new GeoCoordinate(destinationClient.dLatitude, destinationClient.dLongitude);
+            GeoCoordinate origin = new GeoCoordinate(originClient.dLatitude, originClient.dLongitude);
+            GeoCoordinate destination = new GeoCoordinate(destinationClient.dLatitude, destinationClient.dLongitude);
 
             double distance = origin.GetDistanceTo(destination);
-            // travelSpeedConstant is a very approximate calculation
+            //travelSpeedConstant is a very approximate calculation
             const int travelSpeedConstant = 145;
             double travelTime = distance / travelSpeedConstant;
-        }*/
+        }
 
         public AddressCoordinates Geocode(string houseNumber, string streetName, string town, string postalCode, string country)
         {
