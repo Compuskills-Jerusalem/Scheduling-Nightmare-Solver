@@ -18,12 +18,12 @@ namespace CapstoneProject.Migrations
             
             AddColumn("dbo.GroupNames", "AdminTime_SolutionId", c => c.Int(nullable: false));
             CreateIndex("dbo.GroupNames", "AdminTime_SolutionId");
-            AddForeignKey("dbo.GroupNames", "AdminTime_SolutionId", "dbo.Solutions", "SolutionId", cascadeDelete: true);
+            //AddForeignKey("dbo.GroupNames", "AdminTime_SolutionId", "dbo.Solutions", "SolutionId", cascadeDelete: true);
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.GroupNames", "AdminTime_SolutionId", "dbo.Solutions");
+            //DropForeignKey("dbo.GroupNames", "AdminTime_SolutionId", "dbo.Solutions");
             DropIndex("dbo.GroupNames", new[] { "AdminTime_SolutionId" });
             DropColumn("dbo.GroupNames", "AdminTime_SolutionId");
             DropTable("dbo.Solutions");
