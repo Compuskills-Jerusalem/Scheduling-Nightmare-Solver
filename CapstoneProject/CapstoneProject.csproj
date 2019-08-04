@@ -262,6 +262,14 @@
     <Compile Include="Migrations\201908011412316_AddDBSetForAdminTime.Designer.cs">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908041313310_AdminTime.cs" />
+    <Compile Include="Migrations\201908041313310_AdminTime.Designer.cs">
+      <DependentUpon>201908041313310_AdminTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908041314562_AddCoordinateColumns.cs" />
+    <Compile Include="Migrations\201908041314562_AddCoordinateColumns.Designer.cs">
+      <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
@@ -502,6 +510,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908011412316_AddDBSetForAdminTime.resx">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908041313310_AdminTime.resx">
+      <DependentUpon>201908041313310_AdminTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908041314562_AddCoordinateColumns.resx">
+      <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
