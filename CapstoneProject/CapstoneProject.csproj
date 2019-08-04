@@ -54,6 +54,9 @@
       <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Device.Portable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3f6d3f5f65b761a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Device.Location.Portable.1.0.0\lib\System.Device.Portable.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
@@ -245,8 +248,6 @@
     <Compile Include="Migrations\201907311457301_AddingMigrations.cs" />
     <Compile Include="Migrations\201907311457301_AddingMigrations.Designer.cs">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
-
-
     </Compile>
     <Compile Include="Migrations\201908011251335_AddAdminTime.cs" />
     <Compile Include="Migrations\201908011251335_AddAdminTime.Designer.cs">
@@ -263,6 +264,10 @@
     <Compile Include="Migrations\201908011412316_AddDBSetForAdminTime.cs" />
     <Compile Include="Migrations\201908011412316_AddDBSetForAdminTime.Designer.cs">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908041304035_AddCoordinateColumns.cs" />
+    <Compile Include="Migrations\201908041304035_AddCoordinateColumns.Designer.cs">
+      <DependentUpon>201908041304035_AddCoordinateColumns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -397,7 +402,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907301452363_SplitAddressField.resx">
       <DependentUpon>201907301452363_SplitAddressField.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311247197_updatemydb.resx">
       <DependentUpon>201907311247197_updatemydb.cs</DependentUpon>
@@ -416,8 +420,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311457301_AddingMigrations.resx">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
-
-
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908011251335_AddAdminTime.resx">
       <DependentUpon>201908011251335_AddAdminTime.cs</DependentUpon>
@@ -430,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908011412316_AddDBSetForAdminTime.resx">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908041304035_AddCoordinateColumns.resx">
+      <DependentUpon>201908041304035_AddCoordinateColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

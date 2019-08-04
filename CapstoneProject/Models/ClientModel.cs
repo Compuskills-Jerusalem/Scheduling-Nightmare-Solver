@@ -118,6 +118,9 @@ namespace CapstoneProject.Models
         public DateTime AvailableFrom { get; set; }
         public DateTime AvailableUntil { get; set; }
 
+        public double dLatitude { get; set; }
+        public double dLongitude { get; set; }
+
         [Required]
         [Display(Name = "Client Group")]
         public int GroupNameId { get; set; }

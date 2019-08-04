@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Net;
 using System.IO;
-using System.Web.Script.Serialization;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
+using System.Device.Location;
+
 
 namespace CapstoneProject.Controllers
 {
@@ -20,9 +17,15 @@ namespace CapstoneProject.Controllers
             public string Longitude { get; set; }
         }
 
+        public void GetDistance(GeoCoordinate originAddress, GeoCoordinate destinationAddress)
+        {
+
+        }
+
         // GET: Location
         public ActionResult Index()
         {
+            
             string BuildUrl(string houseNumber, string streetName, string town, string postalCode, string country)
             {
                 string urlBeginning = $"https://geocoder.api.here.com/6.2/geocode.json?app_id=LhgMMXSgRrECNyW5g28t&app_code=G8x8pAjhZNjNR_QLWcyyQQ&searchtext=";
@@ -76,7 +79,9 @@ namespace CapstoneProject.Controllers
             JToken longitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Longitude");
             address.Latitude = latitudeJson.ToString();
             address.Longitude = longitudeJson.ToString();
-            
+
+            GeoCoordinate geocoordinate = new GeoCoordinate();
+
             return Content(address.Latitude);
         }            
     }
