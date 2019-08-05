@@ -6,7 +6,6 @@ using System.Device.Location;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using static CapstoneProject.Controllers.LocationController;
 using CapstoneProject.Models;
 
 namespace CapstoneProject.Logic
@@ -16,8 +15,6 @@ namespace CapstoneProject.Logic
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }
-
-    //put in try catch
 
     public class Location
     {
@@ -81,12 +78,20 @@ namespace CapstoneProject.Logic
                 }
             }
 
-            JObject json = JObject.Parse(dataText);
-            JToken latitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Latitude");
-            JToken longitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Longitude");
-            address.Latitude = (double)latitudeJson;
-            address.Longitude = (double)longitudeJson;
-            return address;
+            try
+            {
+                JObject json = JObject.Parse(dataText);
+                JToken latitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Latitude");
+                JToken longitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Longitude");
+                address.Latitude = (double)latitudeJson;
+                address.Longitude = (double)longitudeJson;
+                return address;
+            }
+            catch
+            {
+                return address;
+            }
+            
         }
 
     }

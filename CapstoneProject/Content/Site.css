@@ -55,6 +55,10 @@ border-color: none !important;
     background-color: #5c4965 !important;
     border-color: #5c4965 !important;
 }
+.btn-create{
+    border-style: solid;
+    display: inline-block;
+}
 .navbar {
     border-radius: 0px !important;
 }

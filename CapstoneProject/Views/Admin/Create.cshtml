@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Create timetable</h2>
 
 
 @using (Html.BeginForm()) 
@@ -13,9 +13,8 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Give your groups a title</h4>
-        <p>Please enter in the titles for the two groups you want to match. After you enter the names you will not be able to edit or delete them. 
-        Then press continue.</p>
+        @*<h4>Give your groups a title</h4>*@
+        <p>Enter names for the groups to be matched</p>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
