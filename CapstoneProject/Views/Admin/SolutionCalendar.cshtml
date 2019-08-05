@@ -1,4 +1,9 @@
-﻿
+﻿@model CapstoneProject.Models.AdminTime
+
+@{
+    ViewBag.Title = "Test";
+}
+
 
 
 
@@ -13,19 +18,16 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
 
-@model IEnumerable<CapstoneProject.Models.AdminTime>
+<div>
+@Html.AttributeEncode(Model.AdminDate)
+</div>
 
-@{
-    ViewBag.Title = "Test";
-}
-
-
-@foreach (var dt in Model)
+@*@foreach (var dt in Model)
 {
-    
-        <div id="scheduler"></div>
 
-        <script>
+    <div id="scheduler"></div>
+
+    <script>
         $("#scheduler").kendoScheduler({
             date: @dt,
             selectable: true,
@@ -39,6 +41,6 @@
                 }
             ]
         });
-        </script>
-  
-}
+    </script>
+
+}*@
