@@ -20,7 +20,13 @@
     @Html.ActionLink("Select date range", "CreateAdminTime")
 </p>
 
+<<<<<<< HEAD
 <p style="padding-top: 10px;"></p> 
+=======
+<p>
+    @Html.ActionLink("Create New Groups to Match Up", "Create")
+</p>
+>>>>>>> 97f50a1e551ec69d1a59a53e413fab6b5e5164e2
 
 <table class="table">
     <tr>
@@ -37,7 +43,7 @@
     {
         if (!Model.Any()) //Why is this not working?
         {
-            <p>They are no clients listed yet. Please create a new client.</p>
+            <p>There are no clients listed yet. Please create a new client.</p>
         }
         else
         {
@@ -51,7 +57,7 @@
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
                 </td>
             </tr>
         }
