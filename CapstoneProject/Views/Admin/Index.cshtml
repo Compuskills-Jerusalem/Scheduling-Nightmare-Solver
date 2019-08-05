@@ -19,6 +19,11 @@
 <p class="btn btn-create">
     @Html.ActionLink("Select date range", "CreateAdminTime")
 </p>
+
+<p>
+    @Html.ActionLink("Create New Groups to Match Up", "Create")
+</p>
+
 <table class="table">
     <tr>
         <th>
@@ -34,7 +39,7 @@
     {
         if (!Model.Any()) //Why is this not working?
         {
-            <p>They are no clients listed yet. Please create a new client.</p>
+            <p>There are no clients listed yet. Please create a new client.</p>
         }
         else
         {
@@ -48,7 +53,7 @@
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
                 </td>
             </tr>
         }
