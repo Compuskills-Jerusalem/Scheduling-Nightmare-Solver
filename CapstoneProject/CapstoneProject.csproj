@@ -245,8 +245,6 @@
     <Compile Include="Migrations\201907311457301_AddingMigrations.cs" />
     <Compile Include="Migrations\201907311457301_AddingMigrations.Designer.cs">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
-
-
     </Compile>
     <Compile Include="Migrations\201908011251335_AddAdminTime.cs" />
     <Compile Include="Migrations\201908011251335_AddAdminTime.Designer.cs">
@@ -274,9 +272,14 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AvailabilityVM.cs" />
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-CapstoneProject-20190709040528.mdf" />
+    <Content Include="App_Data\aspnet-CapstoneProject-20190709040528_log.ldf">
+      <DependentUpon>aspnet-CapstoneProject-20190709040528.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-datetimepicker.css" />
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -352,9 +355,9 @@
     <Content Include="Views\Solution\Index.cshtml" />
     <Content Include="Views\Solution\Test.cshtml" />
     <Content Include="Views\Admin\CreateAdminTime.cshtml" />
+    <Content Include="Views\Solution\Solve.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Location\" />
   </ItemGroup>
   <ItemGroup>
@@ -397,7 +400,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907301452363_SplitAddressField.resx">
       <DependentUpon>201907301452363_SplitAddressField.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311247197_updatemydb.resx">
       <DependentUpon>201907311247197_updatemydb.cs</DependentUpon>
@@ -416,8 +418,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907311457301_AddingMigrations.resx">
       <DependentUpon>201907311457301_AddingMigrations.cs</DependentUpon>
-
-
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908011251335_AddAdminTime.resx">
       <DependentUpon>201908011251335_AddAdminTime.cs</DependentUpon>
