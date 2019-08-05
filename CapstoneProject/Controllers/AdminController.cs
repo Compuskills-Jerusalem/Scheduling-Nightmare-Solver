@@ -69,8 +69,7 @@ namespace CapstoneProject.Controllers
 
         public ActionResult CreateAdminTime()
         {
-            var adminTimes = _context.AdminTimes.ToList();
-            return View(adminTimes);
+            return View();
         }
 
         // POST: Customer/Create
@@ -83,6 +82,12 @@ namespace CapstoneProject.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult SolutionCalendar()
+        {
+            var ListOfAdminTimes = _context.AdminTimes.ToList();
+            return View(ListOfAdminTimes);
         }
 
         //GET: Admin2/Edit/5

@@ -1,5 +1,7 @@
 ﻿
 
+
+
 <meta charset="utf-8" />
 <title>Kendo UI Snippet</title>
 
@@ -20,8 +22,7 @@
 
 @foreach (var dt in Model)
 {
-    if (Model.Any())
-    {
+    
         <div id="scheduler"></div>
 
         <script>
@@ -39,10 +40,5 @@
             ]
         });
         </script>
-    }
-
-    else
-    {
-        <p>They are no dates put in</p>
-    }
+  
 }
