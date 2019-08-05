@@ -44,20 +44,35 @@ namespace CapstoneProject.Controllers
         // GET: Admin2/Create
         public ActionResult Create()
         {
-            return View("Create");
+            var groupNames = new List<GroupName>();
+            for (var i = 0; i < 2; i++)
+            {
+                groupNames.Add(new GroupName());
+            }
+            return View(groupNames);
+
+            //return View("Create");
         }
 
         // POST: Admin2/Create
         [HttpPost]
-        public ActionResult Create(GroupName groupName1, GroupName groupName2)
+        public ActionResult Create(List<GroupName> groupNames)
         {
             if (!ModelState.IsValid)
                 return View();
             try
             {
-                _context.GroupNames.Add(groupName1);
-                _context.GroupNames.Add(groupName2);
+                //    IList<GroupName> groupNames = new List<GroupName>();
+                //    groupNames.Add(groupName1);
+                //    groupNames.Add(groupName2);
+
+                _context.GroupNames.AddRange(groupNames);
                 _context.SaveChanges();
+
+
+                //_context.GroupNames.Add(groupName1);
+                //_context.GroupNames.Add(groupName2);
+                //_context.SaveChanges();
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
@@ -70,8 +85,7 @@ namespace CapstoneProject.Controllers
 
         public ActionResult CreateAdminTime()
         {
-            var adminTimes = _context.AdminTimes.ToList();
-            return View(adminTimes);
+            return View();
         }
 
         // POST: Customer/Create
@@ -84,6 +98,12 @@ namespace CapstoneProject.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult SolutionCalendar()
+        {
+            var ListOfAdminTimes = _context.AdminTimes.ToList();
+            return View(ListOfAdminTimes);
         }
 
         //GET: Admin2/Edit/5

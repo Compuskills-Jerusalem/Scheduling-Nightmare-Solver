@@ -11,13 +11,8 @@
 {
     @Html.AntiForgeryToken()
     
-<div class="form-horizontal">
-    <h4>
-        The month you want to create your solution for
-    </h4>
-    <h5>
-       (the day will not make a difference, you can chose any day of that month)
-    </h5>
+    <div class="form-horizontal">
+        <h4>AdminTime</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -28,16 +23,12 @@
             </div>
         </div>
 
-
-
-
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
-</div>
+    </div>
 }
 
 <div>
