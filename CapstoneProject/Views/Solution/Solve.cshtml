@@ -1,5 +1,5 @@
-﻿@*@model IEnumerable<CapstoneProject.ViewModels.AvailabilityVM>*@
-@model CapstoneProject.Models.Client
+﻿@model IEnumerable<CapstoneProject.Models.Client>
+@*@model CapstoneProject.Models.Client*@
 
 @{
     ViewBag.Title = "Solve";
@@ -11,11 +11,12 @@
     <tr>
         <td>Client Test Name</td>
     </tr>
-    @*@foreach (var item in Model)*@
+    @foreach (var item in Model)
     {
         <tr>
-            @*<td>@item.ClientVm.FirstName</td>*@
-            <td>item.FirstName</td>
+            
+            <td>@item.FirstName</td>
+            <td>@item.AvailableFrom</td>
         </tr>
     }
 </table>
