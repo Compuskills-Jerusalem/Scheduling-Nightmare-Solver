@@ -12,18 +12,19 @@
 <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
 
 @model IEnumerable<CapstoneProject.Models.AdminTime>
+    @using CapstoneProject.ViewModels
 
 @{
     ViewBag.Title = "Test";
 }
 
-@foreach (DateTime dt in Model)
+@foreach (var dt in Model)
 {
     <div id="scheduler"></div>
 
     <script>
         $("#scheduler").kendoScheduler({
-            date: @Model.AdminDate,
+            date: @dt,
             selectable: true,
             views: ["day", "month"],
             dataSource: [

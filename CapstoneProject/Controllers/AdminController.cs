@@ -49,13 +49,14 @@ namespace CapstoneProject.Controllers
 
         // POST: Admin2/Create
         [HttpPost]
-        public ActionResult Create(GroupName groupName)
+        public ActionResult Create(GroupName groupName1, GroupName groupName2)
         {
             if (!ModelState.IsValid)
                 return View();
             try
             {
-                _context.GroupNames.Add(groupName);
+                _context.GroupNames.Add(groupName1);
+                _context.GroupNames.Add(groupName2);
                 _context.SaveChanges();
                 // TODO: Add insert logic here
 
@@ -69,7 +70,8 @@ namespace CapstoneProject.Controllers
 
         public ActionResult CreateAdminTime()
         {
-            return View();
+            var adminTimes = _context.AdminTimes.ToList();
+            return View(adminTimes);
         }
 
         // POST: Customer/Create
@@ -109,15 +111,19 @@ namespace CapstoneProject.Controllers
         // GET: Admin2/Delete/5
         public ActionResult Delete(int id)
         {
+            var groupName = _context.GroupNames.Where(g => g.Id == id).FirstOrDefault();
             return View();
         }
 
         // POST: Admin2/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, GroupName groupName)
         {
             try
             {
+                groupName = _context.GroupNames.Where(g => g.Id == id).FirstOrDefault();
+                _context.GroupNames.Remove(groupName);
+                _context.SaveChanges();
                 // TODO: Add delete logic here
 
                 return RedirectToAction("Index");
