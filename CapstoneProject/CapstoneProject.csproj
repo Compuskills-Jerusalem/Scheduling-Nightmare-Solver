@@ -286,6 +286,14 @@
     <Compile Include="Migrations\201908041439034_AddCoordinateColumns1.Designer.cs">
       <DependentUpon>201908041439034_AddCoordinateColumns1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908061008573_updateClientModel.cs" />
+    <Compile Include="Migrations\201908061008573_updateClientModel.Designer.cs">
+      <DependentUpon>201908061008573_updateClientModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908061115495_addcolumnsdlatdlong.cs" />
+    <Compile Include="Migrations\201908061115495_addcolumnsdlatdlong.Designer.cs">
+      <DependentUpon>201908061115495_addcolumnsdlatdlong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
@@ -547,6 +555,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041439034_AddCoordinateColumns1.resx">
       <DependentUpon>201908041439034_AddCoordinateColumns1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908061008573_updateClientModel.resx">
+      <DependentUpon>201908061008573_updateClientModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908061115495_addcolumnsdlatdlong.resx">
+      <DependentUpon>201908061115495_addcolumnsdlatdlong.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
