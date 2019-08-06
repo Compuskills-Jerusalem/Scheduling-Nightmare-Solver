@@ -456,15 +456,12 @@
     <Content Include="Views\Solution\Index.cshtml" />
     <Content Include="Views\Solution\Test.cshtml" />
     <Content Include="Views\Admin\CreateAdminTime.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Admin\SolutionCalendar.cshtml" />
-=======
 
     <Content Include="Views\Solution\Solve.cshtml" />
 
     <Content Include="Views\Admin\Delete.cshtml" />
 
->>>>>>> 97f50a1e551ec69d1a59a53e413fab6b5e5164e2
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Location\" />
