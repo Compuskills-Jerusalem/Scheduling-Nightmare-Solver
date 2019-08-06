@@ -82,8 +82,8 @@
 //        //{
 //        //    //string query = "SELECT c1.Id, c1.AvailableFrom, c1.FirstName + ' ' + c1.LastName client_1, c2.Id, c2.FirstName + ' ' + c2.LastName client_2 FROM Clients c1 INNER JOIN Clients c2 ON c1.Id > c2.Id AND c1.AvailableFrom = c2.AvailableFrom";
 //        //    //string query = "SELECT * FROM Clients";
-            
-         
+
+
 
 //        //    //return(query);
 //        //}
