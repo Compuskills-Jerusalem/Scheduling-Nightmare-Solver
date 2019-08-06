@@ -6,7 +6,6 @@ using System.Device.Location;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using static CapstoneProject.Controllers.LocationController;
 using CapstoneProject.Models;
 
 namespace CapstoneProject.Logic
@@ -51,16 +50,16 @@ namespace CapstoneProject.Logic
             return urlBeginning;
         }
 
-     /*   public void GetTravelTime(Client originClient, Client destinationClient)
+        public void GetTravelTime(Client originClient, Client destinationClient)
         {
-            //GeoCoordinate origin = new GeoCoordinate(originClient.dLatitude, originClient.dLongitude);
-            //GeoCoordinate destination = new GeoCoordinate(destinationClient.dLatitude, destinationClient.dLongitude);
+            GeoCoordinate origin = new GeoCoordinate(originClient.dLatitude, originClient.dLongitude);
+            GeoCoordinate destination = new GeoCoordinate(destinationClient.dLatitude, destinationClient.dLongitude);
 
             double distance = origin.GetDistanceTo(destination);
-            // travelSpeedConstant is a very approximate calculation
+            //travelSpeedConstant is a very approximate calculation
             const int travelSpeedConstant = 145;
             double travelTime = distance / travelSpeedConstant;
-        }*/
+        }
 
         public AddressCoordinates Geocode(string houseNumber, string streetName, string town, string postalCode, string country)
         {
@@ -79,12 +78,20 @@ namespace CapstoneProject.Logic
                 }
             }
 
-            JObject json = JObject.Parse(dataText);
-            JToken latitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Latitude");
-            JToken longitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Longitude");
-            address.Latitude = (double)latitudeJson;
-            address.Longitude = (double)longitudeJson;
-            return address;
+            try
+            {
+                JObject json = JObject.Parse(dataText);
+                JToken latitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Latitude");
+                JToken longitudeJson = json.SelectToken("$.Response..Location.NavigationPosition..Longitude");
+                address.Latitude = (double)latitudeJson;
+                address.Longitude = (double)longitudeJson;
+                return address;
+            }
+            catch
+            {
+                return address;
+            }
+            
         }
 
     }

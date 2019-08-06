@@ -1,7 +1,14 @@
-﻿
+﻿@model IEnumerable<CapstoneProject.Models.AdminTime>
+
+@{
+    ViewBag.Title = "SolutionCalendar";
+}
+
+
+
 
 <meta charset="utf-8" />
-<title>Kendo UI Snippet</title>
+<title>Solution Calendar</title>
 
 <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.common.min.css" />
 <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.2.619/styles/kendo.rtl.min.css" />
@@ -11,20 +18,16 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
 
-@model IEnumerable<CapstoneProject.Models.AdminTime>
-
-@{
-    ViewBag.Title = "Test";
-}
-
+@*<div>
+@Html.AttributeEncode(Model.AdminDate)
+</div>*@
 
 @foreach (var dt in Model)
 {
-    if (Model.Any())
-    {
-        <div id="scheduler"></div>
 
-        <script>
+    <div id="scheduler"></div>
+
+    <script>
         $("#scheduler").kendoScheduler({
             date: @dt,
             selectable: true,
@@ -38,11 +41,6 @@
                 }
             ]
         });
-        </script>
-    }
+    </script>
 
-    else
-    {
-        <p>They are no dates put in</p>
-    }
 }

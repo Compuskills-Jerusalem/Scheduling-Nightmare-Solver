@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CapstoneProject.ViewModels.AvailabilityVM>
+
+{
+    ViewBag.Title = "Solve";
+}
+
+<h2>Solve</h2>
+
+<table class="table table-striped">
+    <tr>
+        <td>Client Test Name</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.ClientVm.FirstName</td>
+            <td>@item.AvailableSlotVm.StartTime</td>
+            <td>@item.ClientVm.AvailableFrom</td>
+        </tr>
+    }
+</table>
+

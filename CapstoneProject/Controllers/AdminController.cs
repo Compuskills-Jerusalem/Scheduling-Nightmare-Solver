@@ -44,19 +44,35 @@ namespace CapstoneProject.Controllers
         // GET: Admin2/Create
         public ActionResult Create()
         {
-            return View("Create");
+            var groupNames = new List<GroupName>();
+            for (var i = 0; i < 2; i++)
+            {
+                groupNames.Add(new GroupName());
+            }
+            return View(groupNames);
+
+            //return View("Create");
         }
 
         // POST: Admin2/Create
         [HttpPost]
-        public ActionResult Create(GroupName groupName)
+        public ActionResult Create(List<GroupName> groupNames)
         {
             if (!ModelState.IsValid)
                 return View();
             try
             {
-                _context.GroupNames.Add(groupName);
+                //    IList<GroupName> groupNames = new List<GroupName>();
+                //    groupNames.Add(groupName1);
+                //    groupNames.Add(groupName2);
+
+                _context.GroupNames.AddRange(groupNames);
                 _context.SaveChanges();
+
+
+                //_context.GroupNames.Add(groupName1);
+                //_context.GroupNames.Add(groupName2);
+                //_context.SaveChanges();
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
@@ -69,8 +85,7 @@ namespace CapstoneProject.Controllers
 
         public ActionResult CreateAdminTime()
         {
-            var adminTimes = _context.AdminTimes.ToList();
-            return View(adminTimes);
+            return View();
         }
 
         // POST: Customer/Create
@@ -83,6 +98,12 @@ namespace CapstoneProject.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult SolutionCalendar()
+        {
+            var ListOfAdminTimes = _context.AdminTimes.ToList();
+            return View(ListOfAdminTimes);
         }
 
         //GET: Admin2/Edit/5
@@ -110,15 +131,19 @@ namespace CapstoneProject.Controllers
         // GET: Admin2/Delete/5
         public ActionResult Delete(int id)
         {
+            var groupName = _context.GroupNames.Where(g => g.Id == id).FirstOrDefault();
             return View();
         }
 
         // POST: Admin2/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, GroupName groupName)
         {
             try
             {
+                groupName = _context.GroupNames.Where(g => g.Id == id).FirstOrDefault();
+                _context.GroupNames.Remove(groupName);
+                _context.SaveChanges();
                 // TODO: Add delete logic here
 
                 return RedirectToAction("Index");
