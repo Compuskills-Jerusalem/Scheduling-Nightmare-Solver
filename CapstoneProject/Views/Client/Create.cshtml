@@ -95,7 +95,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Client.AvailableFrom, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Client.AvailableFrom, new { htmlAttributes = new { @class = "form-control datetimepicker" } })
+                @Html.EditorFor(model => model.Client.AvailableFrom, new { htmlAttributes = new { @class = "form-control", placeholder = "DD-MM-YYYY" } })
                 @Html.ValidationMessageFor(model => model.Client.AvailableFrom, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -103,7 +103,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Client.AvailableUntil, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Client.AvailableUntil, new { htmlAttributes = new { @class = "form-control datetimepicker" } })
+                @Html.EditorFor(model => model.Client.AvailableUntil, new { htmlAttributes = new { @class = "form-control", placeholder = "DD-MM-YYYY" } })
                 @Html.ValidationMessageFor(model => model.Client.AvailableUntil, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -130,18 +130,29 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/common")
 }
 
-<div>
+
 <script type="text/javascript">
     $(function () {
-        $('#AvailableFrom').datetimepicker({
+        $('#AvailableFrom', '#AvailableUntil').datetimepicker({
             format: "DD/MM/YYYY"
         }).on('dp.change', function (e) {
-            $(this).data('dateTimePicker').hide();
+            $(this).data('DateTimePicker').hide();
         });
     });
 </script>
-
-</div>
+@*<script type="text/javascript">
+        $(function () {
+            $('#AvailableFrom').datetimepicker();
+            $('#AvailableUntil').datetimepicker({
+                useCurrent: false //Important! See issue #1075
+            });
+            $("#AvailableFrom").on("dp.change", function (e) {
+                $('#AvailableUntil').data("DateTimePicker").minDate(e.date);
+            });
+            $("#AvailableUntil").on("dp.change", function (e) {
+                $('#AvailableFrom').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+    </script>*@

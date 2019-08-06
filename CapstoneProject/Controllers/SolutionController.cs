@@ -33,50 +33,50 @@ namespace CapstoneProject.Controllers
             return View();
         }
 
-        public ActionResult Solve()
-        {
-            //string query = "SELECT Id, ClientID, StartTime, EndTime FROM AvailableSlots";
-            //IEnumerable<AvailableSlot> data = _context.Database.SqlQuery<AvailableSlot>(query);
+        //public ActionResult Solve()
+        //{
+        //    //string query = "SELECT Id, ClientID, StartTime, EndTime FROM AvailableSlots";
+        //    //IEnumerable<AvailableSlot> data = _context.Database.SqlQuery<AvailableSlot>(query);
 
-            //return View(data.ToList());
+        //    //return View(data.ToList());
 
-            //var query = (from cl in _context.Clients
-            //             join avsl in _context.AvailableSlots on cl.AvailableFrom equals avsl.StartTime
-            //             select new
-            //             {
-            //                 cl.FirstName,
-            //                 avsl.StartTime,
-            //                 cl.AvailableFrom
-            //             }).ToList();
+        //    //var query = (from cl in _context.Clients
+        //    //             join avsl in _context.AvailableSlots on cl.AvailableFrom equals avsl.StartTime
+        //    //             select new
+        //    //             {
+        //    //                 cl.FirstName,
+        //    //                 avsl.StartTime,
+        //    //                 cl.AvailableFrom
+        //    //             }).ToList();
 
-            //return View(query);
+        //    //return View(query);
 
-            //try select:
+        //    //try select:
 
 
-            var joinedTables = from cl in _context.Clients
-                               join avsl in _context.AvailableSlots on cl.AvailableFrom equals avsl.StartTime
-                               //where cl.GroupNameId != avsl.Client.GroupNameId
+        //    //var joinedTables = from cl in _context.Clients
+        //    //                   join avsl in _context.AvailableSlots on cl.AvailableFrom equals avsl.StartTime
+        //    //                   //where cl.GroupNameId != avsl.Client.GroupNameId
 
-                               select new AvailabilityVM { ClientVm = cl, AvailableSlotVm = avsl };
-            return View(joinedTables);
+        //    //                   select new AvailabilityVM { ClientVm = cl, AvailableSlotVm = avsl };
+        //    //return View(joinedTables);
 
-            //var selectWithWhere = from c in _context.Clients where c.AvailableFrom == c.AvailableFrom select c;
+        //    //var selectWithWhere = from c in _context.Clients where c.AvailableFrom == c.AvailableFrom select c;
 
-            //var query = (from c in _context.Clients
-            //             where c.FirstName == "Rochel"
-            //             select new
-            //             {
-            //                 c.FirstName,
-            //                 c.AvailableFrom
-            //             }).ToList();
+        //    //var query = (from c in _context.Clients
+        //    //             where c.FirstName == "Rochel"
+        //    //             select new
+        //    //             {
+        //    //                 c.FirstName,
+        //    //                 c.AvailableFrom
+        //    //             }).ToList();
 
-            //string query = "SELECT Id, FirstName, AvailableFrom FROM Clients";
-            //IEnumerable<Client> data = _context.Database.SqlQuery<Client>(query);
-            //return View(data);
+        //    //string query = "SELECT Id, FirstName, AvailableFrom FROM Clients";
+        //    //IEnumerable<Client> data = _context.Database.SqlQuery<Client>(query);
+        //    //return View(data);
 
-            //return View(GetClientsPerDay());
-        }
+        //    //return View(GetClientsPerDay());
+        //}
 
         //public IEnumerable<Client> GetClientsPerDay (DateTime oneDay)
         //{

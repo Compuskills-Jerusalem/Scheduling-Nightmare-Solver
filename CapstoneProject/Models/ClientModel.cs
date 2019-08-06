@@ -117,7 +117,9 @@ namespace CapstoneProject.Models
 
         public string Email { get; set; }
 
+        [Required]
         public DateTime AvailableFrom { get; set; }
+        [Required]
         public DateTime AvailableUntil { get; set; }
 
 
