@@ -278,17 +278,9 @@
     <Compile Include="Migrations\201908041314562_AddCoordinateColumns.Designer.cs">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.cs" />
-    <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.Designer.cs">
-      <DependentUpon>201908041435458_DeleteCoordinateColumns.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201908041439034_AddCoordinateColumns1.cs" />
     <Compile Include="Migrations\201908041439034_AddCoordinateColumns1.Designer.cs">
       <DependentUpon>201908041439034_AddCoordinateColumns1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908052241232_AddUsingToAdminTime.cs" />
-    <Compile Include="Migrations\201908052241232_AddUsingToAdminTime.Designer.cs">
-      <DependentUpon>201908052241232_AddUsingToAdminTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -300,7 +292,6 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\AvailabilityVM.cs" />
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -458,9 +449,6 @@
     <Content Include="Views\Solution\Index.cshtml" />
     <Content Include="Views\Solution\Test.cshtml" />
     <Content Include="Views\Admin\CreateAdminTime.cshtml" />
-    <Content Include="Views\Admin\SolutionCalendar.cshtml" />
-    <Content Include="Views\Solution\Solve.cshtml" />
-    <Content Include="Views\Admin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Location\" />
@@ -545,14 +533,8 @@
     <EmbeddedResource Include="Migrations\201908041314562_AddCoordinateColumns.resx">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908041435458_DeleteCoordinateColumns.resx">
-      <DependentUpon>201908041435458_DeleteCoordinateColumns.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041439034_AddCoordinateColumns1.resx">
       <DependentUpon>201908041439034_AddCoordinateColumns1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908052241232_AddUsingToAdminTime.resx">
-      <DependentUpon>201908052241232_AddUsingToAdminTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
