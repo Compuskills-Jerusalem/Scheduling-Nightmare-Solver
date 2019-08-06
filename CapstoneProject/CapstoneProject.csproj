@@ -286,6 +286,10 @@
     <Compile Include="Migrations\201908052241232_AddUsingToAdminTime.Designer.cs">
       <DependentUpon>201908052241232_AddUsingToAdminTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908061421351_AddingCoordinateColumns.cs" />
+    <Compile Include="Migrations\201908061421351_AddingCoordinateColumns.Designer.cs">
+      <DependentUpon>201908061421351_AddingCoordinateColumns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
@@ -300,6 +304,7 @@
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.html" />
     <Content Include="App_Data\aspnet-CapstoneProject-20190709040528.mdf" />
     <Content Include="App_Data\aspnet-CapstoneProject-20190709040528_log.ldf">
       <DependentUpon>aspnet-CapstoneProject-20190709040528.mdf</DependentUpon>
@@ -549,6 +554,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908052241232_AddUsingToAdminTime.resx">
       <DependentUpon>201908052241232_AddUsingToAdminTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908061421351_AddingCoordinateColumns.resx">
+      <DependentUpon>201908061421351_AddingCoordinateColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
