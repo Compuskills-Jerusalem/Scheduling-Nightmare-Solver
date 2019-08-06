@@ -29,6 +29,13 @@ namespace CapstoneProject.Controllers
         // GET: Client
         public ActionResult Index()
         {
+            //var clients = _context.Clients.ToList();
+
+            //var viewModel = new CreateClientNameViewModel { Client = clients };
+
+            //return View("Index", viewModel);
+
+
             var clients = _context.Clients.ToList();
 
             return View(clients);

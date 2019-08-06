@@ -278,21 +278,17 @@
     <Compile Include="Migrations\201908041314562_AddCoordinateColumns.Designer.cs">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.cs" />
-    <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.Designer.cs">
-      <DependentUpon>201908041435458_DeleteCoordinateColumns.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201908041439034_AddCoordinateColumns1.cs" />
     <Compile Include="Migrations\201908041439034_AddCoordinateColumns1.Designer.cs">
       <DependentUpon>201908041439034_AddCoordinateColumns1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908061008573_updateClientModel.cs" />
-    <Compile Include="Migrations\201908061008573_updateClientModel.Designer.cs">
-      <DependentUpon>201908061008573_updateClientModel.cs</DependentUpon>
+    <Compile Include="Migrations\201908052241232_AddUsingToAdminTime.cs" />
+    <Compile Include="Migrations\201908052241232_AddUsingToAdminTime.Designer.cs">
+      <DependentUpon>201908052241232_AddUsingToAdminTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908061115495_addcolumnsdlatdlong.cs" />
-    <Compile Include="Migrations\201908061115495_addcolumnsdlatdlong.Designer.cs">
-      <DependentUpon>201908061115495_addcolumnsdlatdlong.cs</DependentUpon>
+    <Compile Include="Migrations\201908061421351_AddingCoordinateColumns.cs" />
+    <Compile Include="Migrations\201908061421351_AddingCoordinateColumns.Designer.cs">
+      <DependentUpon>201908061421351_AddingCoordinateColumns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -308,6 +304,7 @@
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.html" />
     <Content Include="App_Data\aspnet-CapstoneProject-20190709040528.mdf" />
     <Content Include="App_Data\aspnet-CapstoneProject-20190709040528_log.ldf">
       <DependentUpon>aspnet-CapstoneProject-20190709040528.mdf</DependentUpon>
@@ -464,10 +461,12 @@
     <Content Include="Views\Solution\Index.cshtml" />
     <Content Include="Views\Solution\Test.cshtml" />
     <Content Include="Views\Admin\CreateAdminTime.cshtml" />
+    <Content Include="Views\Admin\SolutionCalendar.cshtml" />
     <Content Include="Views\Solution\Solve.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\Location\" />
   </ItemGroup>
   <ItemGroup>
@@ -550,17 +549,14 @@
     <EmbeddedResource Include="Migrations\201908041314562_AddCoordinateColumns.resx">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908041435458_DeleteCoordinateColumns.resx">
-      <DependentUpon>201908041435458_DeleteCoordinateColumns.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041439034_AddCoordinateColumns1.resx">
       <DependentUpon>201908041439034_AddCoordinateColumns1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908061008573_updateClientModel.resx">
-      <DependentUpon>201908061008573_updateClientModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908052241232_AddUsingToAdminTime.resx">
+      <DependentUpon>201908052241232_AddUsingToAdminTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908061115495_addcolumnsdlatdlong.resx">
-      <DependentUpon>201908061115495_addcolumnsdlatdlong.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908061421351_AddingCoordinateColumns.resx">
+      <DependentUpon>201908061421351_AddingCoordinateColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
