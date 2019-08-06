@@ -3,7 +3,7 @@ namespace CapstoneProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddCoordinateColumns1 : DbMigration
+    public partial class AddingCoordinateColumns : DbMigration
     {
         public override void Up()
         {
@@ -13,8 +13,6 @@ namespace CapstoneProject.Migrations
         
         public override void Down()
         {
-            //DropColumn("dbo.Clients", "dLongitude");
-            //DropColumn("dbo.Clients", "dLatitude");
         }
     }
 }

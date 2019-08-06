@@ -111,7 +111,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Client.ClientGroup, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.GroupName,
+                @Html.DropDownListFor(model => model.Client.GroupNameId,
                                              new SelectList(Model.GroupName, "Id", "Name"), "--Select One--")
             </div>
         </div>
