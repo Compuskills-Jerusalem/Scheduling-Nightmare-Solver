@@ -54,6 +54,9 @@
       <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Device.Portable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3f6d3f5f65b761a0, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Device.Location.Portable.1.0.0\lib\System.Device.Portable.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
@@ -186,6 +189,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Location.cs" />
     <Compile Include="Migrations\201907251302015_ChangedClientAddedGroupName.cs" />
     <Compile Include="Migrations\201907251302015_ChangedClientAddedGroupName.Designer.cs">
       <DependentUpon>201907251302015_ChangedClientAddedGroupName.cs</DependentUpon>
@@ -262,7 +266,6 @@
     <Compile Include="Migrations\201908011412316_AddDBSetForAdminTime.Designer.cs">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Migrations\201908041322143_AddToListOnAdminTimeController.cs" />
     <Compile Include="Migrations\201908041322143_AddToListOnAdminTimeController.Designer.cs">
       <DependentUpon>201908041322143_AddToListOnAdminTimeController.cs</DependentUpon>
@@ -274,11 +277,6 @@
     <Compile Include="Migrations\201908041314562_AddCoordinateColumns.cs" />
     <Compile Include="Migrations\201908041314562_AddCoordinateColumns.Designer.cs">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
-
-    </Compile>
-    <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.cs" />
-    <Compile Include="Migrations\201908041435458_DeleteCoordinateColumns.Designer.cs">
-      <DependentUpon>201908041435458_DeleteCoordinateColumns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201908041439034_AddCoordinateColumns1.cs" />
     <Compile Include="Migrations\201908041439034_AddCoordinateColumns1.Designer.cs">
@@ -297,6 +295,10 @@
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-CapstoneProject-20190709040528.mdf" />
+    <Content Include="App_Data\aspnet-CapstoneProject-20190709040528_log.ldf">
+      <DependentUpon>aspnet-CapstoneProject-20190709040528.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-datetimepicker.css" />
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -451,7 +453,6 @@
     <Content Include="Views\Admin\CreateAdminTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Location\" />
   </ItemGroup>
   <ItemGroup>
@@ -525,7 +526,6 @@
     <EmbeddedResource Include="Migrations\201908011412316_AddDBSetForAdminTime.resx">
       <DependentUpon>201908011412316_AddDBSetForAdminTime.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Migrations\201908041322143_AddToListOnAdminTimeController.resx">
       <DependentUpon>201908041322143_AddToListOnAdminTimeController.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,9 +534,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041314562_AddCoordinateColumns.resx">
       <DependentUpon>201908041314562_AddCoordinateColumns.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908041435458_DeleteCoordinateColumns.resx">
-      <DependentUpon>201908041435458_DeleteCoordinateColumns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908041439034_AddCoordinateColumns1.resx">
       <DependentUpon>201908041439034_AddCoordinateColumns1.cs</DependentUpon>
