@@ -19,17 +19,20 @@
 <script src="https://kendo.cdn.telerik.com/2019.2.619/js/kendo.all.min.js"></script>
 
 @*<div>
-@Html.AttributeEncode(Model.AdminDate)
-</div>*@
+    @Html.AttributeEncode(Model.AdminDate)
+    </div>*@
+
+
+
 
 @foreach (var dt in Model)
 {
+    <p>dt.AdminTime is @dt.AdminDate</p>
 
     <div id="scheduler"></div>
-
     <script>
         $("#scheduler").kendoScheduler({
-            date: @dt,
+            date: @dt.AdminDate,
             selectable: true,
             views: ["day", "month"],
             dataSource: [
