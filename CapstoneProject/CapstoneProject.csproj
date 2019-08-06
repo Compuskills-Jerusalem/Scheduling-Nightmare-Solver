@@ -304,6 +304,7 @@
     <Compile Include="ViewModels\CreateClientNameViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.html" />
     <Content Include="App_Data\aspnet-CapstoneProject-20190709040528.mdf" />
     <Content Include="App_Data\aspnet-CapstoneProject-20190709040528_log.ldf">
       <DependentUpon>aspnet-CapstoneProject-20190709040528.mdf</DependentUpon>
