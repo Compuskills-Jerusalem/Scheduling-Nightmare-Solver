@@ -465,9 +465,9 @@
     <Content Include="Views\Solution\Index.cshtml" />
     <Content Include="Views\Solution\Test.cshtml" />
     <Content Include="Views\Admin\CreateAdminTime.cshtml" />
-    <Content Include="Views\Admin\SolutionCalendar.cshtml" />
     <Content Include="Views\Solution\Solve.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Solution\SolutionCalendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
