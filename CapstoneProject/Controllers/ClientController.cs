@@ -109,8 +109,8 @@ namespace CapstoneProject.Controllers
         // GET: Client/Edit/5
         public ActionResult Edit(int id)
         {
-            var currrentClient = _context.Clients.Where(c => c.Id == id).FirstOrDefault();
-            return View(currrentClient);
+            var currentClient = _context.Clients.Where(c => c.Id == id).FirstOrDefault();
+            return View(currentClient);
         }
 
         // POST: Client/Edit/5
