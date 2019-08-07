@@ -105,15 +105,20 @@ namespace CapstoneProject.Controllers
         //GET: Admin2/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var currentGroupName = _context.GroupNames.Where(g => g.Id == id).FirstOrDefault();
+            return View(currentGroupName);
         }
 
         // POST: Admin2/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, GroupName groupName)
         {
+            if (!ModelState.IsValid)
+                return View();
             try
             {
+                _context.Entry(groupName).State = EntityState.Modified;
+                _context.SaveChanges();
                 // TODO: Add update logic here
 
                 return RedirectToAction("Index");
