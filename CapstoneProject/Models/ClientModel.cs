@@ -36,7 +36,7 @@ namespace CapstoneProject.Models
         [Required]
         public DateTime AvailableFrom { get; set; }
         [Required]
-        public DateTime AvailableUntil { get; set; }
+        public DateTime AvailableTo { get; set; }
 
 
         //[Required]

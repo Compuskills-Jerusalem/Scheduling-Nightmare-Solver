@@ -190,6 +190,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Logic\Location.cs" />
+    <Compile Include="Logic\SortingAlgorithm.cs" />
     <Compile Include="Migrations\201907251302015_ChangedClientAddedGroupName.cs" />
     <Compile Include="Migrations\201907251302015_ChangedClientAddedGroupName.Designer.cs">
       <DependentUpon>201907251302015_ChangedClientAddedGroupName.cs</DependentUpon>
@@ -294,6 +295,10 @@
     <Compile Include="Migrations\201908071159546_addMatchModelandTable.Designer.cs">
       <DependentUpon>201908071159546_addMatchModelandTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908071435042_Change Group to Group_Id.cs" />
+    <Compile Include="Migrations\201908071435042_Change Group to Group_Id.Designer.cs">
+      <DependentUpon>201908071435042_Change Group to Group_Id.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
@@ -310,6 +315,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="App_Data\aspnet-CapstoneProject-20190709040528.mdf" />
+    <Content Include="App_Data\aspnet-CapstoneProject-20190709040528_log.ldf">
+      <DependentUpon>aspnet-CapstoneProject-20190709040528.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-datetimepicker.css" />
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -467,7 +476,6 @@
     <Content Include="Views\Admin\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\Location\" />
   </ItemGroup>
@@ -562,6 +570,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908071159546_addMatchModelandTable.resx">
       <DependentUpon>201908071159546_addMatchModelandTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908071435042_Change Group to Group_Id.resx">
+      <DependentUpon>201908071435042_Change Group to Group_Id.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
