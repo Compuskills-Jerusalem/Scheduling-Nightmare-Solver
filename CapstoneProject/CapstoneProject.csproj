@@ -294,10 +294,13 @@
     <Compile Include="Migrations\201908071159546_addMatchModelandTable.Designer.cs">
       <DependentUpon>201908071159546_addMatchModelandTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908071317583_deleteAvailableSlot.cs" />
+    <Compile Include="Migrations\201908071317583_deleteAvailableSlot.Designer.cs">
+      <DependentUpon>201908071317583_deleteAvailableSlot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
-    <Compile Include="Models\AvailableSlot.cs" />
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Models\GroupName.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -562,6 +565,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908071159546_addMatchModelandTable.resx">
       <DependentUpon>201908071159546_addMatchModelandTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908071317583_deleteAvailableSlot.resx">
+      <DependentUpon>201908071317583_deleteAvailableSlot.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
