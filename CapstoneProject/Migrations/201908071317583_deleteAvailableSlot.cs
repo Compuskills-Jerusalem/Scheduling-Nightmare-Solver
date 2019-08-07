@@ -3,16 +3,16 @@ namespace CapstoneProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddingCoordinateColumns : DbMigration
+    public partial class deleteAvailableSlot : DbMigration
     {
         public override void Up()
         {
-            //AddColumn("dbo.Clients", "dLatitude", c => c.Double(nullable: false));
-            //AddColumn("dbo.Clients", "dLongitude", c => c.Double(nullable: false));
+            Sql("Drop Table AvailableSlots");
         }
         
         public override void Down()
         {
+            
         }
     }
 }
