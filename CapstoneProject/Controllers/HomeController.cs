@@ -23,7 +23,7 @@ namespace CapstoneProject.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact Details";
 
             return View();
         }
