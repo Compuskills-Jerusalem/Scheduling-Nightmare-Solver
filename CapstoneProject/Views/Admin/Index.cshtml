@@ -29,36 +29,31 @@
 
 <p style="padding-top: 10px;"></p> 
 
-<p>
-    @Html.ActionLink("Create New Groups to Match Up", "Create")
-</p>
 
 <table class="table">
 
+    @if (!Model.Any()) //Why is this not working?
+    {
+    <tr>
+        <td>
+            <p>There are no group names created yet. Please create a new group name.</p>
+        </td>
+    </tr>
+    }
 
     @foreach (var item in Model)
     {
-        if (!Model.Any()) //Why is this not working?
-        {
+
     <tr>
         <td>
-            <p>There are no clients listed yet. Please create a new client.</p>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
-        }
-        else
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-                </td>
-            </tr>
-        }
     }
 
 </table>
