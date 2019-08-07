@@ -38,52 +38,30 @@ namespace CapstoneProject.Controllers
             return View();
         }
 
-
         public ActionResult Solve()
         {
-            
 
-            var dates = DatesToLoopThru();
+            ClientsPerDaySorted();
 
-            List<List<Client>> ClientsPerDaySorted = new List<List<Client>> { };
-            //List<List<List<Client>>> ClientsSorted = new List<List<List<Client>>> { };
 
-                foreach (DateTime date in dates)
-                {
+                //int Group1Count = ClientsGroup1.Count();
+                //int Group2Count = ClientsGroup2.Count();
+                //int longer = 0;
 
-                    List<Client> ClientsPerDay = GetClientsPerDay(date);
-                    List<Client> ClientsGroup1 = new List<Client> { };
-                    List<Client> ClientsGroup2 = new List<Client> { };
+                //if (Group1Count < Group2Count)
+                //    longer = Group2Count;
+                //if (Group2Count < Group1Count)
+                //    longer = Group1Count;
 
-                    foreach (Client client in ClientsPerDay)
-                    {
-                        if (client.GroupNameId == 1)
-                        {
-                            ClientsGroup1.Add(client);
-                        }
-                        if (client.GroupNameId == 2)
-                        {
-                            ClientsGroup2.Add(client);
-                        }
-                    }
 
-                    ClientsPerDaySorted.Add(ClientsGroup1);
-                    ClientsPerDaySorted.Add(ClientsGroup2);
-
-                //ClientsSorted.Add(ClientsPerDaySorted);
- 
-                for (int i = 0; i < j; i++)
-                {
-                    _context.Matches.Add(new Match()
-                    {
-                        Date = ClientsPerDay.First().AvailableFrom,
-                        Group1 = ClientsGroup1[i],
-                        Group2 = ClientsGroup2[i],
-                    });
+                    //_context.Matches.Add(new Match()
+                    //{
+                    //    Date = ClientsPerDay.First().AvailableFrom,
+                    //    Group1 = ClientsGroup1[b],
+                    //    Group2 = ClientsGroup2[b],
+                    //});
           
-                }
 
-            }
             
             return View();
 
@@ -104,11 +82,43 @@ namespace CapstoneProject.Controllers
             return dates;
         }
 
-
         public List<Client> GetClientsPerDay (DateTime oneDay)
         { 
             var ClientsPerDay = from c in _context.Clients where c.AvailableFrom == oneDay select c;
             return ClientsPerDay.ToList();
+        }
+
+        public List<List<Client>> ClientsPerDaySorted()
+        {
+            var dates = DatesToLoopThru();
+
+            List<List<Client>> ClientsPerDaySorted = new List<List<Client>> { };
+
+            foreach (DateTime date in dates)
+            {
+
+                List<Client> ClientsPerDay = GetClientsPerDay(date);
+                List<Client> ClientsGroup1 = new List<Client> { };
+                List<Client> ClientsGroup2 = new List<Client> { };
+
+                foreach (Client client in ClientsPerDay)
+                {
+                    if (client.GroupNameId == 1)
+                    {
+                        ClientsGroup1.Add(client);
+                    }
+                    if (client.GroupNameId == 2)
+                    {
+                        ClientsGroup2.Add(client);
+                    }
+                }
+
+                ClientsPerDaySorted.Add(ClientsGroup1);
+                ClientsPerDaySorted.Add(ClientsGroup2);
+            }
+
+            return ClientsPerDaySorted;
+
         }
 
 
