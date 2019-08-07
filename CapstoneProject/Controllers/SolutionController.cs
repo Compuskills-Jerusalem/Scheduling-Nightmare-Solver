@@ -54,6 +54,7 @@ namespace CapstoneProject.Controllers
                 //    longer = Group1Count;
 
 
+
                     //_context.Matches.Add(new Match()
                     //{
                     //    Date = ClientsPerDay.First().AvailableFrom,
@@ -61,6 +62,23 @@ namespace CapstoneProject.Controllers
                     //    Group2 = ClientsGroup2[b],
                     //});
           
+
+                    ClientsPerDaySorted.Add(ClientsGroup1);
+                    ClientsPerDaySorted.Add(ClientsGroup2);
+
+                //ClientsSorted.Add(ClientsPerDaySorted);
+ 
+                //for (int i = 0; i < j; i++)
+                //{
+                //    _context.Matches.Add(new Match()
+                //    {
+                //        Date = ClientsPerDay.First().AvailableFrom,
+                //        Group1 = ClientsGroup1[i],
+                //        Group2 = ClientsGroup2[i],
+                //    });
+          
+                //}
+
 
             
             return View();

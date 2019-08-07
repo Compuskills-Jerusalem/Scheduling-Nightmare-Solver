@@ -131,8 +131,11 @@ namespace CapstoneProject.Controllers
         // GET: Admin2/Delete/5
         public ActionResult Delete(int id)
         {
-            var groupName = _context.GroupNames.Where(g => g.Id == id).FirstOrDefault();
-            return View();
+            var groupNames = _context.GroupNames.SingleOrDefault(c => c.Id == id);
+            if (groupNames == null)
+                return HttpNotFound();
+
+            return View(groupNames);
         }
 
         // POST: Admin2/Delete/5
