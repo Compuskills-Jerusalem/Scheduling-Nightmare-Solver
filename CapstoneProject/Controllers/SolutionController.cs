@@ -34,6 +34,12 @@ namespace CapstoneProject.Controllers
         {
             return View();
         }
+
+        public ActionResult SolutionCalendar()
+        {
+            var ListOfAdminTimes = _context.AdminTimes.ToList();
+            return View(ListOfAdminTimes);
+        }
         public ActionResult Test()
         {
             return View();
@@ -83,7 +89,7 @@ namespace CapstoneProject.Controllers
 
 
             
-            return View();
+        return View();
 
         }
 

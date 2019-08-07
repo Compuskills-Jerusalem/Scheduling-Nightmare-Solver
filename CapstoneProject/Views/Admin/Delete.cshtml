@@ -8,7 +8,7 @@
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
-<p>ONLY delete a title of a group to which you have not assigned ANY members. Otherwise, information will be lost!</p>
+<p>ONLY delete the title of a group to which you have not assigned ANY members. Otherwise, information will be lost!</p>
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -18,6 +18,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
         </dd>
 
     </dl>
