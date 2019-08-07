@@ -24,6 +24,7 @@ namespace CapstoneProject.Models
         public DbSet<GroupName> GroupNames { get; set; }
         public DbSet<AvailableSlot> AvailableSlots { get; set; }
         public DbSet<AdminTime> AdminTimes { get; set; }
+        public DbSet<Match> Matches { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

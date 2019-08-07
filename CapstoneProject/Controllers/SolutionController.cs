@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
@@ -7,6 +8,9 @@ using System.Web.Mvc;
 using CapstoneProject.Models;
 using CapstoneProject.ViewModels;
 using System.Data;
+
+
+
 
 namespace CapstoneProject.Controllers
 {
@@ -34,43 +38,20 @@ namespace CapstoneProject.Controllers
             return View();
         }
 
+
         public ActionResult Solve()
         {
-            //var query = (from cl in _context.Clients
-            //             join avsl in _context.AvailableSlots on cl.AvailableFrom equals avsl.StartTime
-            //             select new
-            //             {
-            //                 cl.FirstName,
-            //                 avsl.StartTime,
-            //                 cl.AvailableFrom
-            //             }).ToList();
-
-            //return View(query);
-
-            //var joinedTables = from cl in _context.Clients
-            //                   join avsl in _context.AvailableSlots on cl.AvailableFrom equals avsl.StartTime
-            //                   //where cl.GroupNameId != avsl.Client.GroupNameId
-
-            //                   select new AvailabilityVM { ClientVm = cl, AvailableSlotVm = avsl };
-            //return View(joinedTables);
-
-            //var selectWithWhere = from c in _context.Clients where c.AvailableFrom == c.AvailableFrom select c;
-
-            //var clients = from c in _context.Clients
-            //               where c.AvailableFrom > new DateTime(1984, 6, 1)
-            //               select c;
-
-
-            //var clients = _context.Clients.OrderBy(s => s.AvailableFrom).ToList();
+            
 
             var dates = DatesToLoopThru();
 
             List<List<Client>> ClientsPerDaySorted = new List<List<Client>> { };
-            List<List<List<Client>>> ClientsSorted = new List<List<List<Client>>> { };
+            //List<List<List<Client>>> ClientsSorted = new List<List<List<Client>>> { };
 
                 foreach (DateTime date in dates)
                 {
-                    IEnumerable<Client> ClientsPerDay = GetClientsPerDay(date);
+
+                    List<Client> ClientsPerDay = GetClientsPerDay(date);
                     List<Client> ClientsGroup1 = new List<Client> { };
                     List<Client> ClientsGroup2 = new List<Client> { };
 
@@ -89,11 +70,22 @@ namespace CapstoneProject.Controllers
                     ClientsPerDaySorted.Add(ClientsGroup1);
                     ClientsPerDaySorted.Add(ClientsGroup2);
 
-                ClientsSorted.Add(ClientsPerDaySorted);
-                }
+                //ClientsSorted.Add(ClientsPerDaySorted);
+ 
+                //for (int i = 0; i < j; i++)
+                //{
+                //    _context.Matches.Add(new Match()
+                //    {
+                //        Date = ClientsPerDay.First().AvailableFrom,
+                //        Group1 = ClientsGroup1[i],
+                //        Group2 = ClientsGroup2[i],
+                //    });
+          
+                //}
+
+            }
             
-           
-            return View(ClientsSorted);
+            return View();
 
         }
 
@@ -113,13 +105,15 @@ namespace CapstoneProject.Controllers
         }
 
 
-        public IEnumerable<Client> GetClientsPerDay (DateTime oneDay)
+        public List<Client> GetClientsPerDay (DateTime oneDay)
         { 
             var ClientsPerDay = from c in _context.Clients where c.AvailableFrom == oneDay select c;
             return ClientsPerDay.ToList();
         }
 
 
+
         
     }
 }
+
