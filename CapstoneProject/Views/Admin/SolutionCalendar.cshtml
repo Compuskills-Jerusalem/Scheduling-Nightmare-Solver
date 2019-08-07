@@ -23,7 +23,8 @@
     </div>*@
 
 
-
+<h3>Here is the matching slots for your month of work.</h3>
+<h4>To view more details you can double click on any dates you like.</h4>
 
 @foreach (var dt in Model)
 {
@@ -32,9 +33,9 @@
     <div id="scheduler"></div>
     <script>
         $("#scheduler").kendoScheduler({
-            date: @dt.AdminDate,
+            date: new Date("9/8/2014 08:00 AM"),
             selectable: true,
-            views: ["day", "month"],
+            views: ["month", "day"],
             dataSource: [
                 {
                     id: 1,
