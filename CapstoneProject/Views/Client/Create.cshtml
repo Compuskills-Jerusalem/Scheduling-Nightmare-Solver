@@ -95,7 +95,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Client.AvailableFrom, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Client.AvailableFrom, new { htmlAttributes = new { @class = "form-control", placeholder = "DD-MM-YYYY" } })
+                @Html.EditorFor(model => model.Client.AvailableFrom, new { htmlAttributes = new { @class = "form-control", placeholder = "MM-DD-YYYY" } })
                 @Html.ValidationMessageFor(model => model.Client.AvailableFrom, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -103,8 +103,32 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Client.AvailableUntil, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Client.AvailableUntil, new { htmlAttributes = new { @class = "form-control", placeholder = "DD-MM-YYYY" } })
+                @Html.EditorFor(model => model.Client.AvailableUntil, new { htmlAttributes = new { @class = "form-control", placeholder = "MM-DD-YYYY" } })
                 @Html.ValidationMessageFor(model => model.Client.AvailableUntil, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Client.AvailableDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Client.AvailableDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM-DD-YYYY" } })
+                @Html.ValidationMessageFor(model => model.Client.AvailableDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Client.StartTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Client.StartTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Client.StartTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Client.EndTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Client.EndTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Client.EndTime, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -135,24 +159,41 @@
 
 <script type="text/javascript">
     $(function () {
-        $('#AvailableFrom', '#AvailableUntil').datetimepicker({
-            format: "DD/MM/YYYY"
+        $('#Client_AvailableDate').datetimepicker({
+            format: "MM/DD/YYYY"
         }).on('dp.change', function (e) {
             $(this).data('DateTimePicker').hide();
         });
     });
 </script>
-@*<script type="text/javascript">
-        $(function () {
-            $('#AvailableFrom').datetimepicker();
-            $('#AvailableUntil').datetimepicker({
-                useCurrent: false //Important! See issue #1075
-            });
-            $("#AvailableFrom").on("dp.change", function (e) {
-                $('#AvailableUntil').data("DateTimePicker").minDate(e.date);
-            });
-            $("#AvailableUntil").on("dp.change", function (e) {
-                $('#AvailableFrom').data("DateTimePicker").maxDate(e.date);
-            });
+
+<script type="text/javascript">
+    $(function () {
+        $('#Client_AvailableFrom').datetimepicker();
+        $('#Client_AvailableUntil').datetimepicker({
+            useCurrent: false //Important! See issue #1075
         });
-    </script>*@
+        $("#Client_AvailableFrom").on("dp.change", function (e) {
+            $('#Client_AvailableUntil').data("DateTimePicker").minDate(e.date);
+        });
+        $("#Client_AvailableUntil").on("dp.change", function (e) {
+            $('#Client_AvailableFrom').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
+
+@*<script type="text/javascript">
+    $(function () {
+        $('#Client_StartTime').datetimepicker({
+            format: 'LT' 
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#Client_EndTime').datetimepicker({
+            format: 'LT'
+        });
+    });
+</script>*@

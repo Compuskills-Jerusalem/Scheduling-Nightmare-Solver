@@ -294,6 +294,18 @@
     <Compile Include="Migrations\201908071159546_addMatchModelandTable.Designer.cs">
       <DependentUpon>201908071159546_addMatchModelandTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908071307228_addedDateTimes.cs" />
+    <Compile Include="Migrations\201908071307228_addedDateTimes.Designer.cs">
+      <DependentUpon>201908071307228_addedDateTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908071413271_deletedRequiredAdminTime.cs" />
+    <Compile Include="Migrations\201908071413271_deletedRequiredAdminTime.Designer.cs">
+      <DependentUpon>201908071413271_deletedRequiredAdminTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908071513021_DataTypeTime.cs" />
+    <Compile Include="Migrations\201908071513021_DataTypeTime.Designer.cs">
+      <DependentUpon>201908071513021_DataTypeTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
@@ -303,6 +315,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Match.cs" />
+    <Compile Include="Models\MatchingMonth.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AvailabilityVM.cs" />
@@ -565,6 +578,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908071159546_addMatchModelandTable.resx">
       <DependentUpon>201908071159546_addMatchModelandTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908071307228_addedDateTimes.resx">
+      <DependentUpon>201908071307228_addedDateTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908071413271_deletedRequiredAdminTime.resx">
+      <DependentUpon>201908071413271_deletedRequiredAdminTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908071513021_DataTypeTime.resx">
+      <DependentUpon>201908071513021_DataTypeTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

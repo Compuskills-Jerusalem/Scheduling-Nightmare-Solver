@@ -33,11 +33,20 @@ namespace CapstoneProject.Models
 
         public string Email { get; set; }
 
-        [Required]
+        
         public DateTime AvailableFrom { get; set; }
-        [Required]
+        
         public DateTime AvailableUntil { get; set; }
 
+        [MatchingMonth]
+        
+        public DateTime AvailableDate { get; set; }
+
+        [DataType(DataType.Time)]
+        public DateTime StartTime { get; set; }
+
+        [DataType(DataType.Time)]
+        public DateTime EndTime { get; set; }
 
         //[Required]
         public double dLatitude { get; set; }

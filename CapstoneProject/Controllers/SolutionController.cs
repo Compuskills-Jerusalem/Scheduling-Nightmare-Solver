@@ -72,16 +72,7 @@ namespace CapstoneProject.Controllers
 
                 //ClientsSorted.Add(ClientsPerDaySorted);
  
-                for (int i = 0; i < j; i++)
-                {
-                    _context.Matches.Add(new Match()
-                    {
-                        Date = ClientsPerDay.First().AvailableFrom,
-                        Group1 = ClientsGroup1[i],
-                        Group2 = ClientsGroup2[i],
-                    });
-          
-                }
+                
 
             }
             
