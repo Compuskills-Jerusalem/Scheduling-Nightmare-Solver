@@ -63,8 +63,8 @@ namespace CapstoneProject.Controllers
                     //});
           
 
-                    ClientsPerDaySorted.Add(ClientsGroup1);
-                    ClientsPerDaySorted.Add(ClientsGroup2);
+                    //ClientsPerDaySorted.Add(ClientsGroup1);
+                    //ClientsPerDaySorted.Add(ClientsGroup2);
 
                 //ClientsSorted.Add(ClientsPerDaySorted);
  
