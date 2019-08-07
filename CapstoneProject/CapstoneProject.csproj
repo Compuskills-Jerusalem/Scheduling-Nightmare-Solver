@@ -302,6 +302,10 @@
     <Compile Include="Migrations\201908071343320_deletedmoreFiles.Designer.cs">
       <DependentUpon>201908071343320_deletedmoreFiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908071404584_AddNoteToGroupName.cs" />
+    <Compile Include="Migrations\201908071404584_AddNoteToGroupName.Designer.cs">
+      <DependentUpon>201908071404584_AddNoteToGroupName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
@@ -574,6 +578,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908071343320_deletedmoreFiles.resx">
       <DependentUpon>201908071343320_deletedmoreFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908071404584_AddNoteToGroupName.resx">
+      <DependentUpon>201908071404584_AddNoteToGroupName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
