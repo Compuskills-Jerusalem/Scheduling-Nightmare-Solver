@@ -100,11 +100,7 @@ namespace CapstoneProject.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult SolutionCalendar()
-        {
-            var ListOfAdminTimes = _context.AdminTimes.ToList();
-            return View(ListOfAdminTimes);
-        }
+        
 
         //GET: Admin2/Edit/5
         public ActionResult Edit(int id)
