@@ -47,8 +47,8 @@ namespace CapstoneProject.Controllers
 
         public ActionResult Solve()
         {
-            //SortingAlgorithm sortingAlgorithm = new SortingAlgorithm();
-            //sortingAlgorithm.MatchClients();
+            SortingAlgorithm sortingAlgorithm = new SortingAlgorithm();
+            sortingAlgorithm.MatchClients();
             //SortClientsPerDay();
 
 
