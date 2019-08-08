@@ -20,7 +20,7 @@
             @Html.LabelFor(model => model.AdminDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
 
-                @Html.EditorFor(model => model.AdminDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM-YYYY" } })
+                @Html.EditorFor(model => model.AdminDate, new { htmlAttributes = new { @class = "form-control", placeholder = "MM-DD-YYYY" } })
                 @*@Html.ValidationMessageFor(model => model.AdminDate, "", new { @class = "text-danger" })*@
             </div>
         </div>
@@ -42,20 +42,14 @@
 }
 
 <script type="text/javascript">
-    
     $(function () {
         $('#AdminDate').datetimepicker({
-            viewMode: 'years',
-            format: 'MM/YYYY'
-        //}).on('dp.change', function (e) {
-        //    $(this).data('DateTimePicker').hide();
-            });
-        $('#AdminDate').on('dp.hide', function (event) {
-            setTimeout(function () {
-                $('#AdminDate').data('DateTimePicker').viewMode('months');
-            }, 1);
+            format: "MM/DD/YYYY"
+        }).on('dp.change', function (e) {
+            $(this).data('DateTimePicker').hide();
         });
     });
-
 </script>
+
+
 

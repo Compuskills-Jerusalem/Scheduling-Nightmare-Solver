@@ -32,13 +32,15 @@ namespace CapstoneProject.Models
         public string Country { get; set; }
 
         public string Email { get; set; }
-
+        [Required]
         [MatchingMonth]
         public DateTime AvailableDate { get; set; }
 
+        [Required]
         [DataType(DataType.Time)]
         public DateTime StartTime { get; set; }
 
+        [Required]
         [DataType(DataType.Time)]
         public DateTime EndTime { get; set; }
 
