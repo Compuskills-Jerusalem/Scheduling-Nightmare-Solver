@@ -34,7 +34,7 @@ namespace CapstoneProject.Models
         public string Email { get; set; }
 
         
-        public DateTime AvailableFrom { get; set; }
+        public DateTime AvailableTo { get; set; }
         
         public DateTime AvailableUntil { get; set; }
 
