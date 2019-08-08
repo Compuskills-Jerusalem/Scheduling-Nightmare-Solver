@@ -17,16 +17,16 @@ namespace CapstoneProject.Controllers
 {
     public class SolutionController : Controller
     {
-        //private ApplicationDbContext _context;
+        private ApplicationDbContext _context;
 
         public SolutionController()
         {
-            //_context = new ApplicationDbContext();
+            _context = new ApplicationDbContext();
         }
 
         protected override void Dispose(bool disposing)
         {
-            //_context.Dispose();
+            _context.Dispose();
         }
 
         // GET: Solution
