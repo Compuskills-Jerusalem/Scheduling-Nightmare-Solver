@@ -79,7 +79,7 @@ namespace CapstoneProject.Controllers
         [HttpPost]
         public ActionResult Create(Client client)
         {
-            DateTime.Now.ToString("MMddyyyyHHmmss");
+            
             if (!ModelState.IsValid)
                 return View();
 
@@ -120,7 +120,7 @@ namespace CapstoneProject.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Client client)
         {
-            DateTime.Now.ToString("MMddyyyyHHmmss");
+            
             if (!ModelState.IsValid)
                 return View();
             try
