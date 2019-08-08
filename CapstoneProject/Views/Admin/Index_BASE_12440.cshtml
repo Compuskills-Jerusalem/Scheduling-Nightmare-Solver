@@ -1,0 +1,113 @@
+﻿@model IEnumerable<CapstoneProject.Models.GroupName>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Let's Get Started!</h2>
+
+@*<h4>
+        Step #1:<br />
+    </h4>*@
+@*<p>Create new timetable</p>*@
+
+<div>
+    <h4>Step #1:</h4>
+    <p class="btn btn-create">
+        @Html.ActionLink("Create Client groups", "Create")
+    </p>
+</div>
+
+<div>
+    <h4>Step #2:</h4>
+    <p class="btn btn-create">
+        @Html.ActionLink("Select date range", "CreateAdminTime")
+    </p>
+</div>
+
+
+<p style="padding-top: 10px;"></p> 
+
+
+<table class="table">
+
+    @if (!Model.Any()) //Why is this not working?
+    {
+    <tr>
+        <td>
+            <p>There are no group names created yet. Please click the button above to create 2 new group names.</p>
+        </td>
+    </tr>
+    }
+
+    @foreach (var item in Model)
+    {
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+    }
+
+</table>
+@*<h4>
+        Step #2<br />
+    </h4>*@
+
+
+@*<div>
+        <label for="month">Month:</label>
+        <select id="month" name="month">
+            <option selected>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+            <option selected>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+            <option>2029</option>
+            <option>2030</option>
+        </select>
+    </div>*@
+<div style="padding-bottom: 30px;"></div>
+
+<div class="btn btn-default">
+    @Html.ActionLink("Continue", "Create", "Client", new { }, null)
+</div>
+
+
+@*<p>@Html.ActionLink("Clients", "", "", new { href = "javascript:void(0)" })</p>*@
+
+@*<div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Clients", "", "")</li>
+            <li>@Html.ActionLink("Solution", "", "")</li>
+            <li>@Html.ActionLink("Careers", "", "")</li>
+        </ul>
+    </div>*@

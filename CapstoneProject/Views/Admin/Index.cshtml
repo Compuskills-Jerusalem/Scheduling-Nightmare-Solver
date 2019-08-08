@@ -19,15 +19,10 @@
     </p>
 </div>
 
-<div>
-    <h4>Step #2:</h4>
-    <p class="btn btn-create">
-        @Html.ActionLink("Select date range", "CreateAdminTime")
-    </p>
-</div>
 
 
-<p style="padding-top: 10px;"></p> 
+
+<p style="padding-top: 10px;"></p>
 
 
 <table class="table">
@@ -43,6 +38,36 @@
 
     else 
     {
+<<<<<<< HEAD
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    <h4>Step #2:</h4>
+    <p class="btn btn-create">
+        @Html.ActionLink("Select date range", "CreateAdminTime")
+    </p>
+</div>
+
+<div>
+    @if (!Model.Any())
+    {
+        <p>You did not select a month for solution yet.</p>
+    }
+</div>
+=======
         foreach (var item in Model)
         {
 
@@ -68,6 +93,7 @@
     }
 
     </table>
+>>>>>>> d8b838f71c9e4fa5efcd56d515d631a712e40440
 @*<h4>
         Step #2<br />
     </h4>*@
