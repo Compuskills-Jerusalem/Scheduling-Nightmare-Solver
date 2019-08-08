@@ -61,12 +61,7 @@
 </tr>
 
 
-<div>
-    @if (!Model.Any())
-    {
-        <p>You did not select a month for solution yet.</p>
-    }
-</div>
+
 @*@foreach (var item in Model)
     {
 
@@ -127,16 +122,23 @@
         </select>
     </div>*@
 
-
-
-
 <div>
-    <h4>Step #2:</h4>
-    <p class="btn btn-create">
-        @Html.ActionLink("Select date range", "CreateAdminTime")
-    </p>
-</div>
+   
 
+
+
+    <div>
+        <h4>Step #2:</h4>
+        <p class="btn btn-create">
+            @Html.ActionLink("Select date range", "CreateAdminTime")
+        </p>
+        @if (!Model.Any())
+        {
+            <p>You did not select a month for solution yet.</p>
+        }
+        else { <p>You've succesfully completed all the steps. Now you can move on.</p>}
+    </div>
+</div>
 
 @*@using CapstoneProject.ViewModels.AdminTime*@
 
