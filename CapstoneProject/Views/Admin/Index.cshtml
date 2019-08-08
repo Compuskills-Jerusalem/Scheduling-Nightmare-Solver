@@ -19,6 +19,40 @@
     </p>
 </div>
 
+
+
+
+<p style="padding-top: 10px;"></p>
+
+
+<table class="table">
+
+    @if (!Model.Any()) //Why is this not working?
+    {
+        <tr>
+            <td>
+                <p>There are no group names created yet. Please click the button above to create 2 new group names.</p>
+            </td>
+        </tr>
+    }
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
 <div>
     <h4>Step #2:</h4>
     <p class="btn btn-create">
@@ -26,37 +60,12 @@
     </p>
 </div>
 
-
-<p style="padding-top: 10px;"></p> 
-
-
-<table class="table">
-
-    @if (!Model.Any()) //Why is this not working?
+<div>
+    @if (!Model.Any())
     {
-    <tr>
-        <td>
-            <p>There are no group names created yet. Please click the button above to create 2 new group names.</p>
-        </td>
-    </tr>
+        <p>You did not select a month for solution yet.</p>
     }
-
-    @foreach (var item in Model)
-    {
-
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
-    </tr>
-    }
-
-</table>
+</div>
 @*<h4>
         Step #2<br />
     </h4>*@
