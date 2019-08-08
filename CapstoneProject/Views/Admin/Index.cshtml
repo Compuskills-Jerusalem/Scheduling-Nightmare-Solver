@@ -38,7 +38,7 @@
 
     else 
     {
-<<<<<<< HEAD
+
 
         <tr>
             <td>
@@ -54,12 +54,9 @@
 
 </table>
 
-<div>
-    <h4>Step #2:</h4>
-    <p class="btn btn-create">
-        @Html.ActionLink("Select date range", "CreateAdminTime")
-    </p>
-</div>
+
+
+
 
 <div>
     @if (!Model.Any())
@@ -67,8 +64,7 @@
         <p>You did not select a month for solution yet.</p>
     }
 </div>
-=======
-        foreach (var item in Model)
+        @foreach (var item in Model)
         {
 
             <tr>
@@ -93,7 +89,6 @@
     }
 
     </table>
->>>>>>> d8b838f71c9e4fa5efcd56d515d631a712e40440
 @*<h4>
         Step #2<br />
     </h4>*@
@@ -132,6 +127,25 @@
             <option>2030</option>
         </select>
     </div>*@
+
+
+
+
+<div>
+    <h4>Step #2:</h4>
+    <p class="btn btn-create">
+        @Html.ActionLink("Select date range", "CreateAdminTime")
+    </p>
+</div>
+
+
+@using CapstoneProject.ViewModels.AdminTime
+
+
+
+
+
+
 <div style="padding-bottom: 30px;"></div>
 
 <div class="btn btn-default">
