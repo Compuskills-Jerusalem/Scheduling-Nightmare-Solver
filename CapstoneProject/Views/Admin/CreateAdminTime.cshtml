@@ -42,9 +42,14 @@
 }
 
 <script type="text/javascript">
+    //var firstDate = new Date();
+    //var lastDate = new Date(today.getFullYear(), 6, 31);
     $(function () {
         $('#AdminDate').datetimepicker({
-            format: "MM/DD/YYYY"
+            format: "MM/DD/YYYY",
+            //startDate: firstdate,
+            //endDate: lastDate
+            });
         }).on('dp.change', function (e) {
             $(this).data('DateTimePicker').hide();
         });
