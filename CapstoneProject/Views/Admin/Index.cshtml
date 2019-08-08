@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<CapstoneProject.Models.GroupName>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Gettin Started";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -132,11 +132,7 @@
         <p class="btn btn-create">
             @Html.ActionLink("Select date range", "CreateAdminTime")
         </p>
-        @if (!Model.Any())
-        {
-            <p>You did not select a month for solution yet.</p>
-        }
-        else { <p>You've succesfully completed all the steps. Now you can move on.</p>}
+        
     </div>
 </div>
 
