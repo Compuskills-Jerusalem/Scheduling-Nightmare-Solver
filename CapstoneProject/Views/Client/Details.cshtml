@@ -8,109 +8,124 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Client</h4>
+    <h4>CreateClientNameViewModel</h4>
     <hr />
-    <dl class="dl-horizontal"></dl>
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.FirstName)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.Client.FirstName)
-    </dd>
-
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.LastName)
-    </dt>
-
-    <dd>
-        @Html.DisplayFor(model => model.Client.LastName)
-    </dd>
-
-    @*<dt>
-            @Html.DisplayNameFor(model => model.Client.Address)
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Client.Address)
-        </dd>*@
+            @Html.DisplayFor(model => model.Client.FirstName)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.HouseNumber)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.LastName)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.HouseNumber)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.LastName)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.StreetName)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.HouseNumber)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.StreetName)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.HouseNumber)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.Town)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.StreetName)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.Town)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.StreetName)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.PostalCode)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Town)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.PostalCode)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.Town)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.Country)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.PostalCode)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.Country)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.PostalCode)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.Email)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Country)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.Email)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.Country)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.AvailableFrom)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Email)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.AvailableFrom)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.Email)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.AvailableUntil)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.AvailableDate)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Client.AvailableUntil)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.AvailableDate)
+        </dd>
 
-    <dt>
-        @Html.DisplayNameFor(model => model.Client.ClientGroup)
-    </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.StartTime)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.GroupName)
-    </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Client.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.EndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.EndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.dLatitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.dLatitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.dLongitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.dLongitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.ClientGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupName)
+        </dd>
 
     </dl>
-
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
