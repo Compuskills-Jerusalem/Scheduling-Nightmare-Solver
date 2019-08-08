@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<CapstoneProject.Models.GroupName>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Gettin Started";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -19,15 +19,12 @@
     </p>
 </div>
 
-
-
-
 <p style="padding-top: 10px;"></p>
 
 
 <table class="table">
 
-    @if (!Model.Any()) //Why is this not working?
+    @if (!Model.Any())
     {
         <tr>
             <td>
@@ -36,35 +33,9 @@
         </tr>
     }
 
-    else 
+    else
     {
-
-
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
-
-</table>
-
-
-
-
-
-<div>
-    @if (!Model.Any())
-    {
-        <p>You did not select a month for solution yet.</p>
-    }
-</div>
-        @foreach (var item in Model)
+        foreach (var item in Model)
         {
 
             <tr>
@@ -72,23 +43,46 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Notes)
-               </td>
-                <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
         }
-            <tr>
-                <td>
-                    <p>Once you have created the names for both of your groups, you are ready to continue!</p>
-                </td>
-           </tr>
+
     }
 
-    </table>
+</table>
+
+<tr>
+    <td>
+        <p>Once you have created the names for both of your groups, you are ready to continue!</p>
+    </td>
+</tr>
+
+
+
+@*@foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+           </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }*@
+
+
+
+
 @*<h4>
         Step #2<br />
     </h4>*@
@@ -128,18 +122,21 @@
         </select>
     </div>*@
 
-
-
-
 <div>
-    <h4>Step #2:</h4>
-    <p class="btn btn-create">
-        @Html.ActionLink("Select date range", "CreateAdminTime")
-    </p>
+   
+
+
+
+    <div>
+        <h4>Step #2:</h4>
+        <p class="btn btn-create">
+            @Html.ActionLink("Select date range", "CreateAdminTime")
+        </p>
+        
+    </div>
 </div>
 
-
-@using CapstoneProject.ViewModels.AdminTime
+@*@using CapstoneProject.ViewModels.AdminTime*@
 
 
 

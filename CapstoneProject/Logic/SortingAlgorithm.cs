@@ -82,10 +82,15 @@ namespace CapstoneProject.Logic
         }
 
         //if comparisonclient earlier than client, true. if later, false. if 0, null
-        /*public bool IsEarlier(Client clientToSeeIfEarlier, Client client)
+        public bool? IsEarlier(DateTime clientToSeeIfEarlier, DateTime client)
         {
-            int startTimeComparison = clientToSeeIfEarlier.av
-        }*/
+            int timeComparison = clientToSeeIfEarlier.CompareTo(client);
+            if (timeComparison < 0)
+                return true;
+            else if (timeComparison > 0)
+                return false;
+                return null;
+        }
 
         private bool HasNoOverlappingTimeslots(List<Client> clients, Client clientToCompare)
         {
@@ -93,8 +98,6 @@ namespace CapstoneProject.Logic
             {
                 if (currentClient != clientToCompare)
                 {
-                    int startTimeComparison = currentClient.AvailableTo.CompareTo(clientToCompare.AvailableTo);
-                    int endTimeComparison = currentClient.AvailableUntil.CompareTo(clientToCompare.AvailableUntil);
                     // x<0 = earlier | x=0 = the same | x>0 = later
                     if (startTimeComparison >= 0 || endTimeComparison <= 0) {}
                     else
