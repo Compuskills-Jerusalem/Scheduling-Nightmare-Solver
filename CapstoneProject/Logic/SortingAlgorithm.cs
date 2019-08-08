@@ -20,7 +20,7 @@ namespace CapstoneProject.Logic
 
         public List<Client> GetSpecificDateClients(DateTime oneDay)
         {
-            var ClientsPerDay = from c in _context.Clients where c.AvailableFrom == oneDay select c;
+            var ClientsPerDay = from c in _context.Clients where c.AvailableTo == oneDay select c;
             return ClientsPerDay.ToList();
         }
         private List<List<Client>> SortSpecificDateClients()
@@ -62,9 +62,9 @@ namespace CapstoneProject.Logic
 
             foreach (Client client in _context.Clients)
             {
-                if (!dates.Contains(client.AvailableFrom))
+                if (!dates.Contains(client.AvailableTo))
                 {
-                    dates.Add(client.AvailableFrom);
+                    dates.Add(client.AvailableTo);
                 }
             }
 
@@ -73,7 +73,7 @@ namespace CapstoneProject.Logic
 
         private bool IsExactMatch(Client clientOne, Client clientTwo)
         {
-            if (clientOne.AvailableFrom == clientTwo.AvailableFrom &&
+            if (clientOne.AvailableTo == clientTwo.AvailableTo &&
                         clientOne.AvailableTo == clientTwo.AvailableTo)
             {
                 return true;
@@ -87,7 +87,7 @@ namespace CapstoneProject.Logic
             {
                 if (currentClient != clientToCompare)
                 {
-                    int startTimeComparison = currentClient.AvailableFrom.CompareTo(clientToCompare.AvailableFrom);
+                    int startTimeComparison = currentClient.AvailableTo.CompareTo(clientToCompare.AvailableTo);
                     int endTimeComparison = currentClient.AvailableTo.CompareTo(clientToCompare.AvailableTo);
                     // x<0 = earlier | x=0 = the same | x>0 = later
                     if (startTimeComparison >= 0 || endTimeComparison <= 0) {}
@@ -116,7 +116,7 @@ namespace CapstoneProject.Logic
                             Match match = new Match();
                             match.Group1_Id = currentClientOne.Id;
                             match.Group2_Id = currentClientTwo.Id;
-                            match.Date = currentClientOne.AvailableFrom.Date;
+                            match.Date = currentClientOne.AvailableTo.Date;
                             _context.Matches.Add(match);
                         }
                     }
