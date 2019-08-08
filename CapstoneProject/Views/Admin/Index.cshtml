@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CapstoneProject.ViewModels.CreateClientNameViewModel>
+﻿@model IEnumerable<CapstoneProject.Models.GroupName>
 
 @{
     ViewBag.Title = "Index";
@@ -19,15 +19,12 @@
     </p>
 </div>
 
-
-
-
 <p style="padding-top: 10px;"></p>
 
 
 <table class="table">
 
-    @if (!Model.Any()) //Why is this not working?
+    @if (!Model.Any())
     {
         <tr>
             <td>
@@ -57,8 +54,11 @@
 
 </table>
 
-
-
+<tr>
+    <td>
+        <p>Once you have created the names for both of your groups, you are ready to continue!</p>
+    </td>
+</tr>
 
 
 <div>
@@ -67,31 +67,27 @@
         <p>You did not select a month for solution yet.</p>
     }
 </div>
-        @foreach (var item in Model)
-        {
+@*@foreach (var item in Model)
+    {
 
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Notes)
-               </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
-        }
-            <tr>
-                <td>
-                    <p>Once you have created the names for both of your groups, you are ready to continue!</p>
-                </td>
-           </tr>
-    
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+           </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }*@
 
-   
+
+
+
 @*<h4>
         Step #2<br />
     </h4>*@
