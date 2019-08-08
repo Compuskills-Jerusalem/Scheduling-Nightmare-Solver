@@ -92,7 +92,7 @@ namespace CapstoneProject.Controllers
         [HttpPost]
         public ActionResult CreateAdminTime(AdminTime adminTime)
         {
-            DateTime.Now.ToString("MMyyyy");
+            
             if (!ModelState.IsValid)
                 return View();
             _context.AdminTimes.Add(adminTime);
