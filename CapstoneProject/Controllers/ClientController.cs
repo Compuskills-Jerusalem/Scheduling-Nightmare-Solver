@@ -26,6 +26,8 @@ namespace CapstoneProject.Controllers
             _context.Dispose();
         }
 
+
+
         // GET: Client
         public ActionResult Index()
         {
@@ -83,6 +85,7 @@ namespace CapstoneProject.Controllers
 
             try
             {
+                SetAvailabilityDateTimes(client);
                 _context.Clients.Add(client);
                 _context.SaveChanges();
                 // TODO: Add insert logic here
@@ -159,6 +162,20 @@ namespace CapstoneProject.Controllers
                 return View();
             }
         }
+
+        public void SetAvailabilityDateTimes(Client client)
+        {
+            client.AvailableFrom = CreateNewDateTime(client.AvailableDate, client.StartTime);
+            client.AvailableTo = CreateNewDateTime(client.AvailableDate, client.EndTime);
+
+        }
+
+
+        public static DateTime CreateNewDateTime(DateTime date, DateTime time)
+        {
+            return new DateTime(date.Year, date.Month, date.Day, time.Hour, time.Minute, 0);
+        }
+
 
     }
 }

@@ -307,6 +307,10 @@
     <Compile Include="Migrations\201908081239555_updatedClientModel.Designer.cs">
       <DependentUpon>201908081239555_updatedClientModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908081342471_DateTimeParses.cs" />
+    <Compile Include="Migrations\201908081342471_DateTimeParses.Designer.cs">
+      <DependentUpon>201908081342471_DateTimeParses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminTime.cs" />
@@ -587,6 +591,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908081239555_updatedClientModel.resx">
       <DependentUpon>201908081239555_updatedClientModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908081342471_DateTimeParses.resx">
+      <DependentUpon>201908081342471_DateTimeParses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
