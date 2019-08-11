@@ -27,13 +27,17 @@
 <h4>To view more details you can double click on any dates you like.</h4>
 
 @foreach (var dt in Model)
-{//add a comment#
+{
     <p>dt.AdminTime is @dt.AdminDate</p>
+
+    @*<script>
+        string test1 = "9/8/2014 08:00 AM";
+    </script>*@
 
     <div id="scheduler"></div>
     <script>
         $("#scheduler").kendoScheduler({
-            date: new Date("9/8/2014 08:00 AM"),
+            date: new Date(test1),
             selectable: true,
             views: ["month", "day"],
             dataSource: [
