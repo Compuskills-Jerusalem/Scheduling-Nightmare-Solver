@@ -13,5 +13,6 @@ namespace CapstoneProject.Models
 
         [Required]
         public DateTime AdminDate { get; set; }
+       
     }
 }

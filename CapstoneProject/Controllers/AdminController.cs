@@ -95,6 +95,7 @@ namespace CapstoneProject.Controllers
             
             if (!ModelState.IsValid)
                 return View();
+         
             _context.AdminTimes.Add(adminTime);
             _context.SaveChanges();
 
@@ -158,5 +159,6 @@ namespace CapstoneProject.Controllers
                 return View();
             }
         }
-    }
+
+        }
 }
