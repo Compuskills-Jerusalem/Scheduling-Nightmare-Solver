@@ -65,3 +65,7 @@ border-color: none !important;
 .navbar-inverse {
     border-color: #5c4965 !important;
 }
+.k-link {
+    color: aqua !important;
+    /*border-radius: 0 px !important;*/
+}
