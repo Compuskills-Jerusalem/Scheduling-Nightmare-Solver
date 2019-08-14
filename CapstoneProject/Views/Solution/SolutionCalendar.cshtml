@@ -37,7 +37,10 @@
     <div id="scheduler"></div>
     <script>
         $("#scheduler").kendoScheduler({
-            date: new Date("2019/7/31 08:00 AM"),
+            date: new Date("2019/7/31 08:00 AM"), // So over ther I'm trying to pass in the admin time. the reson why it's not working is 
+            //because it wants me to pass in a string, I think, or at least some sort of date code. I'm trying to debug it and figure out the 
+            //exact problem, and then to find a way to sovle it.
+            //Second that error is solved - our calendar is ready to be used, and then we just need to pass in the matchings in a loop, in the folowing code: 
             selectable: true,
             views: ["month", "day"],
             dataSource: [
