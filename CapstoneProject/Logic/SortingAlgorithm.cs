@@ -89,21 +89,21 @@ namespace CapstoneProject.Logic
                 return true;
             else if (timeComparison > 0)
                 return false;
-                return null;
+            return null;
         }
 
         private bool HasNoOverlappingTimeslots(List<Client> clients, Client clientToCompare)
         {
-            foreach (Client currentClient in clients)
-            {
-                if (currentClient != clientToCompare)
-                {
-                    // x<0 = earlier | x=0 = the same | x>0 = later
-                    if (startTimeComparison >= 0 || endTimeComparison <= 0) {}
-                    else
-                        return false;
-                }
-            }
+            //foreach (Client currentClient in clients)
+            //{
+            //    if (currentClient != clientToCompare)
+            //    {
+            //        // x<0 = earlier | x=0 = the same | x>0 = later
+            //        if (startTimeComparison >= 0 || endTimeComparison <= 0) { }
+            //        else
+            //            return false;
+            //    }
+            //}
             return true;
         }
 
@@ -116,8 +116,8 @@ namespace CapstoneProject.Logic
             {
                 for (int ixComparing = ixCurrentClient++; ixComparing < clients.Count; ixComparing++)
                 {
-                    int startTimeComparison = clients[ixCurrentClient].AvailableTo.CompareTo(clients[ixComparing].AvailableTo);
-                    int endTimeComparison = clients[ixCurrentClient].AvailableUntil.CompareTo(clients[ixComparing].AvailableUntil);
+                    int startTimeComparison = clients[ixCurrentClient].AvailableFrom.CompareTo(clients[ixComparing].AvailableFrom);
+                    int endTimeComparison = clients[ixCurrentClient].AvailableTo.CompareTo(clients[ixComparing].AvailableTo);
                     // x<0 = earlier | x=0 = the same | x>0 = later
                     if (startTimeComparison >= 0 || endTimeComparison <= 0)
                     {
@@ -163,5 +163,5 @@ namespace CapstoneProject.Logic
             }
         }
 
-    //}
+    }
 }
