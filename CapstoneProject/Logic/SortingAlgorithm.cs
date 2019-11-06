@@ -18,6 +18,98 @@ namespace CapstoneProject.Logic
             _context.Dispose();
         }
 
+        public void AssignHelpers()
+        {
+            RemoveNonApplicableHelpers();
+            FillOverlapLists();
+        }
+
+        public void RemoveNonApplicableHelpers()
+        {
+            //check if necessary
+
+            /*
+             * foreach (Client helper in helperList)
+             * {
+             *      bool isOverlapping = false;
+             *      if (IsOverlapping(helper, family)
+             *      {
+             *          isOverlapping = true;
+             *      }
+             *      if (isOverlapping == true)
+             *          break;
+             * }
+             * if (isOverlapping == false)
+             * {
+             *      helperList.Remove(helper);
+             *      nonApplicableList.Add(helper);
+             * }
+             * */
+        }
+
+        public void FillOverlapLists()
+        {
+            foreach (Client helper in helperList)
+            {
+                for (int i = 0; i < familyList.Length; i++)
+                {
+                    //overlap is a list of overlaps or will be a matrix or something etc
+                    //basically a table with overlap times
+                    /*
+                     *      helper1     helper2     helper3
+                     * fam1     5           8           12
+                     * fam2     8           5.5         9
+                     * fam3     2.5         7           4
+                     * 
+                     * */
+                    int overlap = GetOverlap(helper, family);
+                    helper.Overlap[i] = { familyList[i].Name, overlap };
+                }
+            }
+        }
+
+        private bool IsOverlapping(Client checkStatus, Client staticComparison)
+        {
+            if (checkStatus.Finish <= staticComparison.Start ||
+                checkStatus.Start >= staticComparison.Finish)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private int GetOverlap(Client client1, Client client2)
+        {
+            DateTime startTime;
+            DateTime finishTime;
+            int overlap;
+            if (client1.Start >= client2.Start)
+                startTime = client1.Start;
+            else startTime = client2.Start;
+            if (client1.Finish <= client2.Finish)
+                startTime = client1.Finish;
+            else startTime = client2.Finish;
+            //calculate overlap by getting difference between the starttime and finishtime
+            //overlap = ...
+            if (overlap < 0)
+                return 0;
+            return overlap;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //old code
         public List<Client> GetSpecificDateClients(DateTime oneDay)
         {
             var ClientsPerDay = from c in _context.Clients where c.AvailableTo == oneDay select c;
